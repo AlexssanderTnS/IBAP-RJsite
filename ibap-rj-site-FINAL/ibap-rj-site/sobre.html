@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quem Somos | IBAP-RJ</title>
+    <meta name="description" content="Conheça o Instituto Brasileiro de Administração Pública e Apoio Universitário do Rio de Janeiro. Missão, visão, valores e história da instituição.">
+    <link rel="canonical" href="https://ibap-rj.org.br/sobre-o-ibap-rj/quem-somos/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="IBAP-RJ">
+    <meta property="og:title" content="Quem Somos | IBAP-RJ">
+    <meta property="og:description" content="Conheça a história, missão e valores do IBAP-RJ.">
+    <meta property="og:url" content="https://ibap-rj.org.br/sobre-o-ibap-rj/quem-somos/">
+
+    <link rel="icon" href="https://ibap-rj.org.br/wp-content/uploads/2023/09/ibap-rj-icon-32x32-1.png" sizes="32x32">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* Estilos específicos para a página interna */
+        .breadcrumb {
+            padding-block: 1rem;
+            font-size: 0.9rem;
+            color: var(--muted);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .breadcrumb a {
+            color: var(--azul-700);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        .page-header {
+            padding-block: clamp(2.5rem, 5vw, 4rem);
+            background: var(--azul-900);
+            color: var(--white);
+        }
+
+        .page-header h1 {
+            color: var(--white);
+            font-size: clamp(2rem, 1.5rem + 2vw, 3rem);
+            margin-bottom: 0.75rem;
+        }
+
+        .page-header p {
+            max-width: 60ch;
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 1.075rem;
+        }
+
+        .page-layout {
+            display: grid;
+            gap: 2.5rem;
+            margin-top: -2.5rem;
+        }
+
+        @media (min-width: 1000px) {
+            .page-layout {
+                grid-template-columns: minmax(0, 1fr) minmax(0, 300px);
+                gap: 3.5rem;
+                align-items: start;
+            }
+        }
+
+        .page-content {
+            display: grid;
+            gap: 3rem;
+        }
+
+        .content-block {
+            padding: clamp(1.75rem, 4vw, 2.5rem);
+            background: var(--white);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .content-block h2 {
+            font-size: clamp(1.5rem, 1.2rem + 1vw, 1.9rem);
+            margin-bottom: 1rem;
+        }
+
+        .content-block > p {
+            max-width: 70ch;
+            color: var(--muted);
+            line-height: 1.8;
+        }
+
+        .values-grid {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        @media (min-width: 700px) {
+            .values-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        .value-card {
+            padding: 1.35rem;
+            background: var(--azul-100);
+            border-left: 3px solid var(--verde-600);
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+        }
+
+        .value-card h3 {
+            margin-bottom: 0.5rem;
+            color: var(--azul-900);
+        }
+
+        .value-card p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        .sidebar {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .sidebar-box {
+            padding: clamp(1.35rem, 3vw, 1.75rem);
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+        }
+
+        .sidebar-box h3 {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            color: var(--azul-900);
+        }
+
+        .sidebar-box ul {
+            display: grid;
+            gap: 0.5rem;
+        }
+
+        .sidebar-box li {
+            border-bottom: 1px solid var(--line);
+        }
+
+        .sidebar-box li:last-child {
+            border-bottom: none;
+        }
+
+        .sidebar-box a {
+            display: block;
+            padding: 0.75rem 0;
+            color: var(--azul-700);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color var(--duration) ease;
+        }
+
+        .sidebar-box a:hover {
+            color: var(--verde-600);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        .document-links {
+            display: grid;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+
+        .document-link {
+            display: flex;
+            gap: 0.75rem;
+            align-items: baseline;
+            padding: 0.75rem;
+            background: var(--white);
+            border: 1px solid var(--line);
+            border-radius: var(--radius-sm);
+            text-decoration: none;
+            color: var(--azul-700);
+            font-weight: 500;
+            transition: border-color var(--duration) ease, background-color var(--duration) ease;
+        }
+
+        .document-link:hover {
+            background: var(--azul-100);
+            border-color: var(--azul-700);
+        }
+
+        .document-link::before {
+            content: "📄";
+            flex-shrink: 0;
+        }
+
+        .pillars {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        @media (min-width: 900px) {
+            .pillars {
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+            }
+        }
+
+        @media (min-width: 600px) and (max-width: 899px) {
+            .pillars {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        .pillar {
+            padding: 1.35rem;
+            background: var(--white);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            text-align: center;
+        }
+
+        .pillar h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.6rem;
+            color: var(--azul-900);
+        }
+
+        .pillar p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .call-to-action {
+            padding: clamp(2rem, 4vw, 3rem);
+            background: var(--verde-100);
+            border-left: 4px solid var(--verde-600);
+            border-radius: 0 var(--radius) var(--radius) 0;
+        }
+
+        .call-to-action h3 {
+            margin-bottom: 0.75rem;
+        }
+
+        .call-to-action p {
+            color: var(--muted);
+            margin-bottom: 1.5rem;
+        }
+    </style>
+
+    <script src="../js/script.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <!-- Barra de acesso rápido (mesmo da homepage) -->
+    <div class="utility-bar">
+        <div class="container utility-bar__inner">
+            <p class="utility-bar__phone">Atendimento: <a href="tel:+552138061000">(21) 3806-1000</a></p>
+            <nav aria-label="Acesso rápido">
+                <ul class="utility-bar__links">
+                    <li><a href="https://ibap-rj.org.br/categoria-transparencia/ibap-rj/">Transparência</a></li>
+                    <li><a href="https://ibap-rj.org.br/categoria-transparencia/editais/">Editais</a></li>
+                    <li><a href="http://200.146.211.21/IBAPCC/">Contracheque</a></li>
+                    <li><a href="https://ibap-rj.org.br/ponto-ibap/">Ponto IBAP</a></li>
+                    <li><a href="mailto:denuncias@ibap-rj.org.br">Canal de denúncias</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Cabeçalho (mesmo da homepage) -->
+    <header class="site-header">
+        <div class="container site-header__inner">
+            <a class="brand" href="/">
+                <img class="brand__logo" src="https://ibap-rj.org.br/wp-content/uploads/2023/09/iba-rj-logo.jpg" alt="IBAP-RJ">
+            </a>
+
+            <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menu">
+                <span class="menu-toggle__bar" aria-hidden="true"></span>
+                <span class="menu-toggle__bar" aria-hidden="true"></span>
+                <span class="menu-toggle__bar" aria-hidden="true"></span>
+            </button>
+
+            <nav class="main-nav" id="main-nav" aria-label="Principal">
+                <ul class="main-nav__list">
+                    <li><a class="main-nav__link" href="/">Home</a></li>
+                    <li><a class="main-nav__link" href="/#atuacao">Atuação</a></li>
+                    <li><a class="main-nav__link" href="/#projetos">Projetos</a></li>
+                    <li><a class="main-nav__link" href="/#boletim">Boletim</a></li>
+                    <li><a class="main-nav__link" href="/#parceiros">Clientes e parceiros</a></li>
+                    <li><a class="main-nav__link" href="/#contato">Contato</a></li>
+                </ul>
+                <a class="btn btn--primary main-nav__cta" href="https://trabalheconosco.ibap-rj.org.br">Trabalhe conosco</a>
+            </nav>
+        </div>
+    </header>
+    <div class="header-sentinel" data-header-sentinel aria-hidden="true"></div>
+
+    <!-- Breadcrumb -->
+    <nav class="container breadcrumb" aria-label="Caminho da página">
+        <a href="/">Home</a> / 
+        <a href="https://ibap-rj.org.br/sobre-o-ibap-rj/">Sobre o IBAP-RJ</a> / 
+        <strong>Quem Somos</strong>
+    </nav>
+
+    <!-- Hero da página interna -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Quem Somos</h1>
+            <p>Conheça a história, missão e valores que guiam o IBAP-RJ há mais de duas décadas no fortalecimento da administração pública brasileira.</p>
+        </div>
+    </section>
+
+    <main id="conteudo">
+        <div class="container page-layout">
+            <article class="page-content reveal">
+                <!-- O Instituto -->
+                <section class="content-block">
+                    <h2>O Instituto</h2>
+                    <p>O Instituto Brasileiro de Administração Pública e Apoio Universitário do Rio de Janeiro (IBAP-RJ), criado em 2002, é uma sociedade civil, sem fins lucrativos, de caráter educativo, científico e cultural.</p>
+                    <p>Tem por finalidade criar, aplicar e compartilhar o conhecimento em gestão de forma a promover o desenvolvimento sustentável, a governança pública e o aperfeiçoamento institucional das organizações.</p>
+                    <p>O principal objetivo é dotar as organizações do Estado, do Mercado e da Sociedade dos meios indispensáveis para o seu crescimento e modernização, segundo os princípios e objetivos fixados na Agenda 2030, da Organização das Nações Unidas — alcançando os Objetivos do Desenvolvimento Sustentável (ODS).</p>
+                    <p>Como instituição científica, tecnológica e de inovação (ICT), o IBAP-RJ tem dentre suas finalidades a pesquisa básica ou aplicada de caráter científico ou tecnológico, além do desenvolvimento de novos produtos, serviços e processos.</p>
+                </section>
+
+                <!-- Missão, Visão e Valores -->
+                <section class="content-block">
+                    <h2>Missão, Visão e Valores</h2>
+                    
+                    <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--line);">
+                        <h3 style="color: var(--verde-600); margin-bottom: 0.5rem;">Missão</h3>
+                        <p style="color: var(--ink); font-weight: 500;">Contribuir para o desenvolvimento de nossos clientes oferecendo serviços de qualidade, soluções inovadoras e resultados efetivos, trabalhando sempre com ética e responsabilidade socioambiental.</p>
+                    </div>
+
+                    <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--line);">
+                        <h3 style="color: var(--verde-600); margin-bottom: 0.5rem;">Visão</h3>
+                        <p style="color: var(--ink); font-weight: 500;">Ser uma referência no seu ramo de atuação, reconhecido por seu comprometimento com a melhoria contínua da qualidade de seus trabalhos e por proporcionar aos clientes e parceiros soluções integradas resultantes de um modelo inovador.</p>
+                    </div>
+
+                    <div style="margin-top: 1.5rem;">
+                        <h3 style="margin-bottom: 1rem; color: var(--azul-900);">Valores</h3>
+                        <div class="values-grid">
+                            <div class="value-card">
+                                <h4>Ética</h4>
+                                <p>Acreditamos que só se alcança o sucesso atuando de forma honesta, transparente e responsável com clientes e parceiros, valorizando as pessoas que trabalham conosco.</p>
+                            </div>
+                            <div class="value-card">
+                                <h4>Qualidade</h4>
+                                <p>Priorizamos a qualidade em nossas atividades. Seguimos a prática de melhorias contínuas, visando alcançar nossos objetivos de tempo, inovação e custos.</p>
+                            </div>
+                            <div class="value-card">
+                                <h4>Responsabilidade Social</h4>
+                                <p>Queremos a nossa continuidade e um amanhã melhor para todos. Cuidamos para que nossas atividades sempre respeitem e prestigiem essa meta.</p>
+                            </div>
+                            <div class="value-card">
+                                <h4>Inovação</h4>
+                                <p>Buscamos constantemente por métodos, tecnologias e processos novos que nos permitam oferecer soluções modernas e eficientes aos nossos clientes e parceiros.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Políticas -->
+                <section class="content-block">
+                    <h2>Políticas de Qualidade e Gestão</h2>
+                    
+                    <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--line);">
+                        <h3 style="color: var(--azul-900); margin-bottom: 0.75rem;">Política de Qualidade</h3>
+                        <p>No escopo de gestão administrativa pública, o IBAP-RJ tangencia a qualidade total para seus clientes, buscando a melhoria contínua de seus colaboradores, serviços e processos através de aprimoramento com valor agregado, a fim de atender e superar as expectativas de mercado.</p>
+                    </div>
+
+                    <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--line);">
+                        <h3 style="color: var(--azul-900); margin-bottom: 0.75rem;">Política de Saúde, Segurança e Meio Ambiente (SMS)</h3>
+                        <p>Assumindo a responsabilidade socioambiental, o IBAP-RJ administra suas atividades de forma a prevenir a poluição e minimizar ou eliminar o uso de recursos naturais não renováveis, bem como os aspectos e impactos ambientais relacionados.</p>
+                        <p>Tudo sempre atendendo às legislações vigentes, familiarizando-se com as comunidades com quem se relaciona, buscando melhoria contínua na Gestão de Meio Ambiente, Saúde e Segurança Ocupacional em suas instalações e gerindo a educação ambiental com seriedade e competência.</p>
+                    </div>
+                </section>
+
+                <!-- Documentos -->
+                <section class="content-block">
+                    <h2>Documentos Institucionais</h2>
+                    <p>Acesse os documentos oficiais do IBAP-RJ para conhecer em detalhes sua estrutura jurídica e governança:</p>
+                    <div class="document-links">
+                        <a class="document-link" href="https://ibap-rj.org.br/wp-content/uploads/2025/06/Estatuto-Social-IBAP-RJ-Mar25.pdf" target="_blank" rel="noopener noreferrer">Estatuto Social<span class="visually-hidden"> (PDF, abre em nova aba)</span></a>
+                        <a class="document-link" href="https://ibap-rj.org.br/wp-content/uploads/2026/06/1-CNPJ.pdf" target="_blank" rel="noopener noreferrer">CNPJ<span class="visually-hidden"> (PDF, abre em nova aba)</span></a>
+                        <a class="document-link" href="https://ibap-rj.org.br/wp-content/uploads/2026/06/ATA-AGE-2024-Eleicao-presidente-Registrada.pdf" target="_blank" rel="noopener noreferrer">Ata de Eleição da Diretoria<span class="visually-hidden"> (PDF, abre em nova aba)</span></a>
+                    </div>
+                </section>
+
+                <!-- Call to action -->
+                <section class="call-to-action reveal">
+                    <h3>Quer conhecer melhor o IBAP-RJ?</h3>
+                    <p>Navegue por outras seções para entender como trabalhamos, nossos projetos e linhas de atuação.</p>
+                    <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+                        <a class="btn btn--outline" href="https://ibap-rj.org.br/sobre-o-ibap-rj/historico/">Ver histórico</a>
+                        <a class="btn btn--outline" href="https://ibap-rj.org.br/sobre-o-ibap-rj/certificacoes/">Certificações</a>
+                        <a class="btn btn--outline" href="https://ibap-rj.org.br/sobre-o-ibap-rj/responsabilidade-socioambiental/">Responsabilidade social</a>
+                    </div>
+                </section>
+            </article>
+
+            <!-- Sidebar com navegação -->
+            <aside class="sidebar" aria-label="Menu lateral">
+                <div class="sidebar-box">
+                    <h3>Sobre o IBAP-RJ</h3>
+                    <ul>
+                        <li><a href="https://ibap-rj.org.br/sobre-o-ibap-rj/quem-somos/">Quem Somos</a></li>
+                        <li><a href="https://ibap-rj.org.br/sobre-o-ibap-rj/organizacao-social/">Organização Social</a></li>
+                        <li><a href="https://ibap-rj.org.br/historico/">Histórico</a></li>
+                        <li><a href="https://ibap-rj.org.br/sobre-o-ibap-rj/responsabilidade-socioambiental/">Responsabilidade Socioambiental</a></li>
+                        <li><a href="https://ibap-rj.org.br/sobre-o-ibap-rj/certificacoes/">Certificações</a></li>
+                        <li><a href="https://ibap-rj.org.br/sobre-o-ibap-rj/protocolos-de-intencoes/">Protocolos de Intenções</a></li>
+                        <li><a href="https://ibap-rj.org.br/sobre-o-ibap-rj/galeria-de-fotos/">Galeria de fotos</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-box">
+                    <h3>Linhas de Atuação</h3>
+                    <ul>
+                        <li><a href="https://ibap-rj.org.br/linhas-de-atuacao/pesquisa-e-consultoria/">Pesquisa e Consultoria</a></li>
+                        <li><a href="https://ibap-rj.org.br/linhas-de-atuacao/atendimento-ao-cidadao/">Atendimento ao Cidadão</a></li>
+                        <li><a href="https://ibap-rj.org.br/linhas-de-atuacao/gestao-integrada-para-resultados/">Gestão para Resultados</a></li>
+                        <li><a href="https://ibap-rj.org.br/linhas-de-atuacao/desenvolvimento-e-governanca/">Governança</a></li>
+                        <li><a href="https://ibap-rj.org.br/linhas-de-atuacao/gestao-de-pessoas/">Gestão de Pessoas</a></li>
+                        <li><a href="https://ibap-rj.org.br/linhas-de-atuacao/gestao-social-e-ambiental/">Gestão Social e Ambiental</a></li>
+                        <li><a href="https://ibap-rj.org.br/linhas-de-atuacao/tecnologia-da-informacao-e-da-comunicacao/">Tecnologia</a></li>
+                        <li><a href="https://ibap-rj.org.br/linhas-de-atuacao/processos-seletivos/">Processos Seletivos</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-box">
+                    <h3>Contato</h3>
+                    <p style="margin: 0; color: var(--muted); font-size: 0.9rem; line-height: 1.6;">
+                        <strong>Telefone:</strong><br>
+                        <a href="tel:+552138061000" style="color: var(--azul-700); text-decoration: none;">(21) 3806-1000</a>
+                    </p>
+                    <p style="margin: 1rem 0 0; color: var(--muted); font-size: 0.9rem; line-height: 1.6;">
+                        <strong>Email:</strong><br>
+                        <a href="mailto:ibap-rj@ibap-rj.org.br" style="color: var(--azul-700); text-decoration: none; word-break: break-word;">ibap-rj@ibap-rj.org.br</a>
+                    </p>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Rodapé (mesmo da homepage) -->
+    <footer class="site-footer">
+        <div class="container site-footer__grid">
+            <div class="site-footer__brand">
+                <p class="site-footer__name">IBAP-RJ</p>
+                <p>Instituto Brasileiro de Administração Pública e Apoio Universitário do Rio de Janeiro. Sociedade civil sem fins lucrativos desde 2002.</p>
+            </div>
+
+            <nav aria-labelledby="rodape-instituto">
+                <h2 class="site-footer__title" id="rodape-instituto">Instituto</h2>
+                <ul>
+                    <li><a href="https://ibap-rj.org.br/sobre-o-ibap-rj/quem-somos/">Quem somos</a></li>
+                    <li><a href="https://ibap-rj.org.br/sobre-o-ibap-rj/organizacao-social/">Organização Social</a></li>
+                    <li><a href="https://ibap-rj.org.br/historico/">Histórico</a></li>
+                    <li><a href="https://ibap-rj.org.br/sobre-o-ibap-rj/responsabilidade-socioambiental/">Responsabilidade socioambiental</a></li>
+                    <li><a href="https://ibap-rj.org.br/sobre-o-ibap-rj/certificacoes/">Certificações</a></li>
+                    <li><a href="https://ibap-rj.org.br/sobre-o-ibap-rj/galeria-de-fotos/">Galeria de fotos</a></li>
+                </ul>
+            </nav>
+
+            <nav aria-labelledby="rodape-atuacao">
+                <h2 class="site-footer__title" id="rodape-atuacao">Pesquisa e consultoria</h2>
+                <ul>
+                    <li><a href="https://ibap-rj.org.br/linhas-de-atuacao/atendimento-ao-cidadao/">Atendimento ao cidadão</a></li>
+                    <li><a href="https://ibap-rj.org.br/linhas-de-atuacao/gestao-integrada-para-resultados/">Gestão para resultados</a></li>
+                    <li><a href="https://ibap-rj.org.br/linhas-de-atuacao/desenvolvimento-e-governanca/">Desenvolvimento e governança</a></li>
+                    <li><a href="https://ibap-rj.org.br/linhas-de-atuacao/gestao-de-pessoas/">Gestão de pessoas</a></li>
+                    <li><a href="https://ibap-rj.org.br/linhas-de-atuacao/gestao-social-e-ambiental/">Gestão social e ambiental</a></li>
+                    <li><a href="https://ibap-rj.org.br/linhas-de-atuacao/tecnologia-da-informacao-e-da-comunicacao/">Tecnologia da informação</a></li>
+                </ul>
+            </nav>
+
+            <nav aria-labelledby="rodape-transparencia">
+                <h2 class="site-footer__title" id="rodape-transparencia">Transparência</h2>
+                <ul>
+                    <li><a href="https://ibap-rj.org.br/categoria-transparencia/ibap-rj/">Compliance</a></li>
+                    <li><a href="https://ibap-rj.org.br/projetos-com-poder-publico/">Projetos com o poder público</a></li>
+                    <li><a href="https://ibap-rj.org.br/categoria-transparencia/regulamento-interno/">Regulamentos internos</a></li>
+                    <li><a href="https://ibap-rj.org.br/categoria-transparencia/editais/">Editais</a></li>
+                    <li><a href="https://ibap-rj.org.br/categoria-transparencia/relatorio-de-transparencia-salarial/">Relatório de transparência</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="container site-footer__bottom">
+            <p>© <span data-year>2026</span> IBAP-RJ. Todos os direitos reservados.</p>
+            <p>Rua Buenos Aires, 68, 31º andar, Rio de Janeiro – RJ</p>
+        </div>
+    </footer>
+
+    <a class="back-to-top" href="#inicio" aria-label="Voltar ao topo">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 15l7-7 7 7"/></svg>
+    </a>
+</body>
+</html>

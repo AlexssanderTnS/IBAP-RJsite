@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Trabalhe Conosco | IBAP-RJ</title>
+    <meta name="description" content="Faça parte do IBAP-RJ. Confira vagas abertas, benefícios e oportunidades de carreira na consultoria pública.">
+    <meta name="canonical" href="https://ibap-rj.org.br/trabalhe-conosco/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="IBAP-RJ">
+    <meta property="og:title" content="Trabalhe Conosco | IBAP-RJ">
+    <meta property="og:description" content="Oportunidades de carreira em consultoria pública e gestão.">
+    <meta property="og:url" content="https://ibap-rj.org.br/trabalhe-conosco/">
+
+    <link rel="icon" href="https://ibap-rj.org.br/wp-content/uploads/2023/09/ibap-rj-icon-32x32-1.png" sizes="32x32">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        :root {
+            --azul-950: #0a1d33;
+            --azul-900: #0e2a47;
+            --azul-700: #1d4e7e;
+            --azul-100: #e8f0f8;
+            --verde-600: #17785a;
+            --verde-100: #e8f3f0;
+            --ink: #1a1a1a;
+            --muted: #666;
+            --line: #ddd;
+            --surface: #f9f9f9;
+            --white: #fff;
+
+            --font-sans: 'Public Sans', system-ui, sans-serif;
+            --font-serif: 'Source Serif 4', Georgia, serif;
+            --shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+            --radius-sm: 6px;
+            --radius: 12px;
+            --radius-lg: 16px;
+            --container: 1200px;
+            --header-height: 76px;
+            --duration: 300ms;
+            --duration-long: 600ms;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--ink);
+            background: var(--white);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-serif);
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .container {
+            max-width: var(--container);
+            margin-inline: auto;
+            padding-inline: clamp(1rem, 4vw, 2rem);
+        }
+
+        .skip-link {
+            position: absolute;
+            left: -10000px;
+            background: #000;
+            color: #fff;
+            padding: 6px;
+            z-index: 10000;
+        }
+
+        /* ========== UTILITY BAR ========== */
+        .utility-bar {
+            background: var(--azul-950);
+            color: var(--white);
+            padding-block: 0.75rem;
+            font-size: 0.85rem;
+            border-bottom: 1px solid var(--azul-900);
+        }
+
+        .utility-bar__inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .utility-bar__phone {
+            margin: 0;
+        }
+
+        .utility-bar__phone a {
+            color: var(--white);
+        }
+
+        .utility-bar__links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .utility-bar__links a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+        }
+
+        .utility-bar__links a:hover {
+            color: var(--white);
+        }
+
+        @media (max-width: 700px) {
+            .utility-bar__inner {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .utility-bar__links {
+                gap: 1rem;
+                font-size: 0.8rem;
+            }
+        }
+
+        /* ========== HEADER ========== */
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: var(--white);
+            border-bottom: 1px solid var(--line);
+            height: var(--header-height);
+        }
+
+        .site-header.sticky {
+            box-shadow: var(--shadow);
+        }
+
+        .site-header__inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+            height: 100%;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .brand__logo {
+            height: 50px;
+            width: auto;
+        }
+
+        .main-nav {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-left: auto;
+        }
+
+        .main-nav__list {
+            display: flex;
+            list-style: none;
+            gap: 0;
+        }
+
+        .main-nav__link {
+            display: block;
+            padding: 0.5rem 1rem;
+            color: var(--azul-700);
+            font-weight: 500;
+            text-decoration: none;
+            transition: color var(--duration) ease;
+        }
+
+        .main-nav__link:hover {
+            color: var(--verde-600);
+        }
+
+        /* ========== BREADCRUMB ========== */
+        .breadcrumb {
+            padding-block: 1rem;
+            font-size: 0.9rem;
+            color: var(--muted);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .breadcrumb a {
+            color: var(--azul-700);
+            text-decoration: none;
+        }
+
+        /* ========== PAGE HEADER ========== */
+        .page-header {
+            padding-block: clamp(2.5rem, 5vw, 4rem);
+            background: var(--azul-900);
+            color: var(--white);
+        }
+
+        .page-header h1 {
+            color: var(--white);
+            font-size: clamp(2rem, 1.5rem + 2vw, 3rem);
+            margin-bottom: 0.75rem;
+        }
+
+        .page-header p {
+            max-width: 60ch;
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 1.075rem;
+        }
+
+        /* ========== PAGE LAYOUT ========== */
+        .page-layout {
+            display: grid;
+            gap: 2.5rem;
+            margin-top: -2.5rem;
+        }
+
+        @media (min-width: 1000px) {
+            .page-layout {
+                grid-template-columns: 1fr minmax(0, 280px);
+                gap: 3.5rem;
+            }
+        }
+
+        /* ========== CONTENT BLOCKS ========== */
+        .content-block {
+            padding: clamp(1.75rem, 4vw, 2.5rem);
+            background: var(--white);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            animation: reveal-up var(--duration-long) ease-out;
+        }
+
+        @keyframes reveal-up {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .content-block h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--azul-900);
+        }
+
+        .content-block > p {
+            color: var(--muted);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        /* ========== GRID DE BENEFÍCIOS ========== */
+        .benefits-grid {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        @media (min-width: 700px) {
+            .benefits-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+        }
+
+        .benefit-card {
+            padding: 1.5rem;
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            text-align: center;
+            transition: all var(--duration) ease;
+        }
+
+        .benefit-card:hover {
+            background: var(--azul-100);
+            border-color: var(--azul-700);
+        }
+
+        .benefit-card__icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .benefit-card h3 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            color: var(--azul-900);
+        }
+
+        .benefit-card p {
+            color: var(--muted);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* ========== VALORES IBAP ========== */
+        .values-list {
+            display: grid;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .value-item {
+            display: flex;
+            gap: 1rem;
+            padding: 1rem;
+            border-left: 3px solid var(--verde-600);
+            background: var(--verde-100);
+            border-radius: var(--radius-sm);
+        }
+
+        .value-item__icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .value-item h3 {
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+            color: var(--azul-900);
+        }
+
+        .value-item p {
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        /* ========== VAGAS GRID ========== */
+        .jobs-grid {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .job-card {
+            padding: 1.5rem;
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            transition: all var(--duration) ease;
+            animation: reveal-up var(--duration-long) ease-out;
+        }
+
+        .job-card:hover {
+            border-color: var(--verde-600);
+            box-shadow: 0 8px 24px rgba(23, 120, 90, 0.1);
+            transform: translateY(-4px);
+        }
+
+        .job-card__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .job-card h3 {
+            font-size: 1.25rem;
+            color: var(--azul-900);
+            flex: 1;
+            min-width: 0;
+        }
+
+        .job-card__badge {
+            padding: 0.4rem 0.9rem;
+            background: var(--verde-100);
+            color: var(--verde-600);
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+        }
+
+        .job-card__description {
+            color: var(--muted);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .job-card__details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--muted);
+            padding: 1rem 0;
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+            margin-bottom: 1rem;
+        }
+
+        .job-card__detail {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .job-card__cta {
+            display: inline-block;
+            padding: 0.6rem 1.2rem;
+            background: var(--verde-600);
+            color: var(--white);
+            border: none;
+            border-radius: var(--radius-sm);
+            font-weight: 500;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all var(--duration) ease;
+            font-size: 0.9rem;
+        }
+
+        .job-card__cta:hover {
+            background: #12593f;
+        }
+
+        /* ========== PROCESSO SELETIVO ========== */
+        .process-timeline {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        @media (min-width: 700px) {
+            .process-timeline {
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+            }
+        }
+
+        .process-step {
+            position: relative;
+            padding: 1.5rem;
+            text-align: center;
+            background: var(--surface);
+            border-radius: var(--radius);
+        }
+
+        .process-step::after {
+            content: '';
+            position: absolute;
+            right: -1.5rem;
+            top: 50%;
+            width: 3rem;
+            height: 2px;
+            background: var(--line);
+            transform: translateY(-50%);
+        }
+
+        .process-step:last-child::after {
+            display: none;
+        }
+
+        .process-step__number {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: var(--verde-600);
+            color: var(--white);
+            border-radius: 50%;
+            line-height: 40px;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+
+        .process-step h3 {
+            font-size: 1rem;
+            color: var(--azul-900);
+            margin-bottom: 0.5rem;
+        }
+
+        .process-step p {
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        /* ========== CTA ========== */
+        .call-to-action {
+            padding: clamp(2rem, 4vw, 3rem);
+            background: var(--verde-100);
+            border-left: 4px solid var(--verde-600);
+            border-radius: 0 var(--radius) var(--radius) 0;
+            text-align: center;
+        }
+
+        .call-to-action h3 {
+            color: var(--azul-900);
+            margin-bottom: 0.75rem;
+            font-size: 1.35rem;
+        }
+
+        .call-to-action p {
+            color: var(--muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .call-to-action a {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: var(--verde-600);
+            color: var(--white);
+            border-radius: var(--radius-sm);
+            font-weight: 500;
+            text-decoration: none;
+            transition: all var(--duration) ease;
+        }
+
+        .call-to-action a:hover {
+            background: #12593f;
+        }
+
+        /* ========== SIDEBAR ========== */
+        .sidebar {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .sidebar-box {
+            padding: 1.5rem;
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+        }
+
+        .sidebar-box h3 {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            color: var(--azul-900);
+            font-weight: 600;
+        }
+
+        .sidebar-box p {
+            color: var(--muted);
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 0.75rem;
+        }
+
+        .sidebar-box a {
+            display: block;
+            padding: 0.6rem 0;
+            color: var(--verde-600);
+            font-weight: 500;
+            text-decoration: none;
+            transition: color var(--duration) ease;
+        }
+
+        .sidebar-box a:hover {
+            color: var(--azul-700);
+        }
+
+        /* ========== FOOTER ========== */
+        .site-footer {
+            background: var(--azul-950);
+            color: var(--white);
+            padding-top: 3rem;
+            padding-bottom: 1.5rem;
+            margin-top: 4rem;
+        }
+
+        .site-footer__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .site-footer__title {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--white);
+        }
+
+        .site-footer nav ul {
+            list-style: none;
+            display: grid;
+            gap: 0.5rem;
+        }
+
+        .site-footer a {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: color var(--duration) ease;
+        }
+
+        .site-footer a:hover {
+            color: var(--white);
+        }
+
+        .site-footer__bottom {
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .site-footer__bottom p {
+            margin: 0.25rem 0;
+        }
+
+        /* ========== RESPONSIVIDADE ========== */
+        @media (max-width: 999px) {
+            .page-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                display: none;
+            }
+
+            .benefits-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .process-timeline {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .process-step::after {
+                display: none;
+            }
+        }
+
+        @media (max-width: 599px) {
+            .page-header h1 {
+                font-size: 1.75rem;
+            }
+
+            .content-block {
+                padding: 1.35rem;
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .job-card__header {
+                flex-direction: column;
+            }
+
+            .job-card__badge {
+                align-self: flex-start;
+            }
+
+            .process-timeline {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+
+    <script src="../js/script.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <!-- Barra de acesso rápido -->
+    <div class="utility-bar">
+        <div class="container utility-bar__inner">
+            <p class="utility-bar__phone">Atendimento: <a href="tel:+552138061000">(21) 3806-1000</a></p>
+            <nav aria-label="Acesso rápido">
+                <ul class="utility-bar__links">
+                    <li><a href="https://ibap-rj.org.br/categoria-transparencia/ibap-rj/">Transparência</a></li>
+                    <li><a href="https://ibap-rj.org.br/categoria-transparencia/editais/">Editais</a></li>
+                    <li><a href="http://200.146.211.21/IBAPCC/">Contracheque</a></li>
+                    <li><a href="https://ibap-rj.org.br/ponto-ibap/">Ponto IBAP</a></li>
+                    <li><a href="mailto:denuncias@ibap-rj.org.br">Canal de denúncias</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Cabeçalho -->
+    <header class="site-header">
+        <div class="container site-header__inner">
+            <a class="brand" href="/">
+                <img class="brand__logo" src="https://ibap-rj.org.br/wp-content/uploads/2023/09/iba-rj-logo.jpg" alt="IBAP-RJ">
+            </a>
+
+            <nav class="main-nav" id="main-nav" aria-label="Principal">
+                <ul class="main-nav__list">
+                    <li><a class="main-nav__link" href="/">Home</a></li>
+                    <li><a class="main-nav__link" href="/sobre.html">Sobre</a></li>
+                    <li><a class="main-nav__link" href="/atuacao.html">Atuação</a></li>
+                    <li><a class="main-nav__link" href="/projetos.html">Projetos</a></li>
+                    <li><a class="main-nav__link" href="/boletim.html">Boletim</a></li>
+                    <li><a class="main-nav__link" href="/contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <nav class="container breadcrumb" aria-label="Caminho da página">
+        <a href="/">Home</a> / 
+        <strong>Trabalhe Conosco</strong>
+    </nav>
+
+    <!-- Hero -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Trabalhe Conosco</h1>
+            <p>Faça parte de uma equipe dedicada a transformar a gestão pública brasileira. Junte-se ao IBAP-RJ e contribua para instituições mais eficientes e cidadãos bem servidos.</p>
+        </div>
+    </section>
+
+    <!-- Conteúdo principal -->
+    <main id="conteudo">
+        <div class="container page-layout">
+            <article>
+                <!-- Por que IBAP-RJ -->
+                <section class="content-block">
+                    <h2>Por Que Trabalhar Conosco?</h2>
+                    <p>O IBAP-RJ é mais do que um consultório — é um espaço de aprendizagem contínua, inovação e impacto social real. Aqui você terá a oportunidade de trabalhar em projetos transformadores em órgãos públicos, desenvolver sua carreira profissional e fazer parte de uma missão relevante.</p>
+
+                    <div class="benefits-grid">
+                        <div class="benefit-card">
+                            <div class="benefit-card__icon">📚</div>
+                            <h3>Desenvolvimento Contínuo</h3>
+                            <p>Programas de capacitação, mentorias e acesso a cursos profissionais para aprimoramento contínuo.</p>
+                        </div>
+
+                        <div class="benefit-card">
+                            <div class="benefit-card__icon">🌍</div>
+                            <h3>Impacto Social</h3>
+                            <p>Trabalhe em projetos que transformam instituições públicas e melhoram a vida de cidadãos.</p>
+                        </div>
+
+                        <div class="benefit-card">
+                            <div class="benefit-card__icon">💪</div>
+                            <h3>Equipe Colaborativa</h3>
+                            <p>Ambiente inclusivo, diverso e de apoio mútuo onde sua voz e contribuição são valorizadas.</p>
+                        </div>
+
+                        <div class="benefit-card">
+                            <div class="benefit-card__icon">⚖️</div>
+                            <h3>Flexibilidade</h3>
+                            <p>Políticas de trabalho flexível que respeitam equilíbrio entre vida profissional e pessoal.</p>
+                        </div>
+
+                        <div class="benefit-card">
+                            <div class="benefit-card__icon">💰</div>
+                            <h3>Benefícios Competitivos</h3>
+                            <p>Remuneração competitiva, vale refeição, assistência médica e benefícios complementares.</p>
+                        </div>
+
+                        <div class="benefit-card">
+                            <div class="benefit-card__icon">🎯</div>
+                            <h3>Crescimento de Carreira</h3>
+                            <p>Planos de carreira claros com oportunidades reais de crescimento e promoção.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Valores IBAP -->
+                <section class="content-block">
+                    <h2>Nossos Valores</h2>
+                    <p>Buscamos profissionais que compartilhem estes valores fundamentais:</p>
+
+                    <div class="values-list">
+                        <div class="value-item">
+                            <div class="value-item__icon">✓</div>
+                            <div>
+                                <h3>Excelência</h3>
+                                <p>Comprometimento com a qualidade em tudo o que fazemos.</p>
+                            </div>
+                        </div>
+
+                        <div class="value-item">
+                            <div class="value-item__icon">✓</div>
+                            <div>
+                                <h3>Integridade</h3>
+                                <p>Transparência, ética e responsabilidade são pilares da nossa atuação.</p>
+                            </div>
+                        </div>
+
+                        <div class="value-item">
+                            <div class="value-item__icon">✓</div>
+                            <div>
+                                <h3>Inovação</h3>
+                                <p>Estamos sempre buscando novas formas de resolver problemas complexos.</p>
+                            </div>
+                        </div>
+
+                        <div class="value-item">
+                            <div class="value-item__icon">✓</div>
+                            <div>
+                                <h3>Colaboração</h3>
+                                <p>Acreditamos no poder do trabalho em equipe e diversidade de perspectivas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Vagas Abertas -->
+                <section class="content-block">
+                    <h2>Vagas Abertas</h2>
+
+                    <div class="jobs-grid">
+                        <!-- Vaga 1 -->
+                        <div class="job-card">
+                            <div class="job-card__header">
+                                <h3>Consultor de Gestão Sênior</h3>
+                                <span class="job-card__badge">Aberta</span>
+                            </div>
+                            <p class="job-card__description">Procuramos profissional experiente em gestão de projetos e consultoria em organizações públicas para atuar em projetos complexos de transformação organizacional.</p>
+                            <div class="job-card__details">
+                                <div class="job-card__detail">📍 Rio de Janeiro, RJ</div>
+                                <div class="job-card__detail">💼 Full-time</div>
+                                <div class="job-card__detail">👥 1 vaga</div>
+                            </div>
+                            <a href="/contato.html?assunto=candidatura-consultor-senior" class="job-card__cta">Candidatar-se</a>
+                        </div>
+
+                        <!-- Vaga 2 -->
+                        <div class="job-card">
+                            <div class="job-card__header">
+                                <h3>Analista de Processos e Governança</h3>
+                                <span class="job-card__badge">Aberta</span>
+                            </div>
+                            <p class="job-card__description">Profissional com formação em processos ou governança para atuar em diagnósticos, desenho e implementação de modelos de gestão integrada.</p>
+                            <div class="job-card__details">
+                                <div class="job-card__detail">📍 Rio de Janeiro, RJ</div>
+                                <div class="job-card__detail">💼 Full-time</div>
+                                <div class="job-card__detail">👥 2 vagas</div>
+                            </div>
+                            <a href="/contato.html?assunto=candidatura-analista-processos" class="job-card__cta">Candidatar-se</a>
+                        </div>
+
+                        <!-- Vaga 3 -->
+                        <div class="job-card">
+                            <div class="job-card__header">
+                                <h3>Especialista em Desenvolvimento de Pessoas</h3>
+                                <span class="job-card__badge">Aberta</span>
+                            </div>
+                            <p class="job-card__description">Busca-se profissional com experiência em T&D, coaching executivo e programas de desenvolvimento para atuar na concepção e execução de programas de capacitação.</p>
+                            <div class="job-card__details">
+                                <div class="job-card__detail">📍 Rio de Janeiro, RJ</div>
+                                <div class="job-card__detail">💼 Full-time</div>
+                                <div class="job-card__detail">👥 1 vaga</div>
+                            </div>
+                            <a href="/contato.html?assunto=candidatura-especialista-pessoas" class="job-card__cta">Candidatar-se</a>
+                        </div>
+
+                        <!-- Vaga 4 -->
+                        <div class="job-card">
+                            <div class="job-card__header">
+                                <h3>Profissional de Gestão de Projetos</h3>
+                                <span class="job-card__badge">Aberta</span>
+                            </div>
+                            <p class="job-card__description">Procura-se profissional com certificação PMO ou equivalente para coordenar e acompanhar projetos de consultoria desde sua concepção até entrega final.</p>
+                            <div class="job-card__details">
+                                <div class="job-card__detail">📍 Rio de Janeiro, RJ</div>
+                                <div class="job-card__detail">💼 Full-time</div>
+                                <div class="job-card__detail">👥 1 vaga</div>
+                            </div>
+                            <a href="/contato.html?assunto=candidatura-pmo" class="job-card__cta">Candidatar-se</a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Processo Seletivo -->
+                <section class="content-block">
+                    <h2>Processo Seletivo</h2>
+                    <p>Nosso processo seletivo é estruturado e transparente, com foco em avaliar competências técnicas e culturais.</p>
+
+                    <div class="process-timeline">
+                        <div class="process-step">
+                            <div class="process-step__number">1</div>
+                            <h3>Inscrição</h3>
+                            <p>Submeta seu currículo e formulário</p>
+                        </div>
+
+                        <div class="process-step">
+                            <div class="process-step__number">2</div>
+                            <h3>Análise</h3>
+                            <p>Análise de perfil e experiência</p>
+                        </div>
+
+                        <div class="process-step">
+                            <div class="process-step__number">3</div>
+                            <h3>Entrevista</h3>
+                            <p>Conversa com nosso time</p>
+                        </div>
+
+                        <div class="process-step">
+                            <div class="process-step__number">4</div>
+                            <h3>Decisão</h3>
+                            <p>Resultado e proposta final</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Call to Action -->
+                <section class="call-to-action">
+                    <h3>Não vê sua vaga? Faça parte do nosso banco de talentos!</h3>
+                    <p>Mesmo que não haja vagas abertas no momento, você pode se cadastrar para futuras oportunidades.</p>
+                    <a href="/contato.html?assunto=banco-talentos">Enviar candidatura espontânea</a>
+                </section>
+            </article>
+
+            <!-- Sidebar -->
+            <aside class="sidebar" aria-label="Menu lateral">
+                <div class="sidebar-box">
+                    <h3>📞 Fale Conosco</h3>
+                    <p>Dúvidas sobre vagas ou processo seletivo?</p>
+                    <a href="tel:+552138061000">(21) 3806-1000</a>
+                    <a href="mailto:rh@ibap-rj.org.br">rh@ibap-rj.org.br</a>
+                </div>
+
+                <div class="sidebar-box">
+                    <h3>📋 Documentos</h3>
+                    <p>Acesse informações sobre nossos processos:</p>
+                    <a href="#">Política de RH</a>
+                    <a href="#">Código de Conduta</a>
+                    <a href="#">Sobre a instituição</a>
+                </div>
+
+                <div class="sidebar-box">
+                    <h3>🔔 Acompanhe Novidades</h3>
+                    <p>Fique atento aos nossos editais e processos seletivos:</p>
+                    <a href="#">Boletim IBAP-RJ</a>
+                    <a href="#">Newsletter</a>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="site-footer">
+        <div class="container site-footer__grid">
+            <div>
+                <p style="font-size: 1.35rem; font-weight: 700; margin-bottom: 0.5rem;">IBAP-RJ</p>
+                <p style="font-size: 0.9rem; line-height: 1.6; color: rgba(255, 255, 255, 0.8);">Instituto Brasileiro de Administração Pública. Transformando pessoas e instituições desde 2002.</p>
+            </div>
+
+            <nav>
+                <h2 class="site-footer__title">Instituto</h2>
+                <ul>
+                    <li><a href="/sobre.html">Quem somos</a></li>
+                    <li><a href="/atuacao.html">Linhas de atuação</a></li>
+                    <li><a href="/trabalhe-conosco.html">Trabalhe conosco</a></li>
+                    <li><a href="/certificacoes.html">Certificações</a></li>
+                </ul>
+            </nav>
+
+            <nav>
+                <h2 class="site-footer__title">Consultoria</h2>
+                <ul>
+                    <li><a href="/atuacao.html">Serviços</a></li>
+                    <li><a href="/projetos.html">Projetos</a></li>
+                    <li><a href="/boletim.html">Boletim</a></li>
+                    <li><a href="/contato.html">Contato</a></li>
+                </ul>
+            </nav>
+
+            <nav>
+                <h2 class="site-footer__title">Transparência</h2>
+                <ul>
+                    <li><a href="https://ibap-rj.org.br/categoria-transparencia/ibap-rj/">Compliance</a></li>
+                    <li><a href="https://ibap-rj.org.br/categoria-transparencia/editais/">Editais</a></li>
+                    <li><a href="https://ibap-rj.org.br/categoria-transparencia/relatorio-de-transparencia-salarial/">Relatórios</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="container site-footer__bottom">
+            <p>© <span id="year">2026</span> IBAP-RJ. Todos os direitos reservados.</p>
+            <p>Rua Buenos Aires, 68, 31º andar, Rio de Janeiro – RJ</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

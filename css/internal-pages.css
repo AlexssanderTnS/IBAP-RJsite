@@ -1,0 +1,479 @@
+/* 
+   Estilos adicionais para páginas internas (sobre.html, politicas.html, etc)
+   
+   Instruções:
+   1. Adicione este arquivo ANTES de fechar a tag </head> em cada página interna
+   2. Ou copie e cole todo o conteúdo ao final do style.css
+   
+   <link rel="stylesheet" href="../css/internal-pages.css">
+*/
+
+/* ========== BREADCRUMB ========== */
+
+.breadcrumb {
+    padding-block: 1rem;
+    font-size: 0.9rem;
+    color: var(--muted);
+    border-bottom: 1px solid var(--line);
+}
+
+.breadcrumb a {
+    color: var(--azul-700);
+    text-decoration: none;
+    transition: color var(--duration) ease;
+}
+
+.breadcrumb a:hover,
+.breadcrumb a:focus {
+    color: var(--verde-600);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    outline: none;
+}
+
+/* ========== PAGE HEADER (Hero das páginas internas) ========== */
+
+.page-header {
+    padding-block: clamp(2.5rem, 5vw, 4rem);
+    background: var(--azul-900);
+    color: var(--white);
+}
+
+.page-header h1 {
+    color: var(--white);
+    font-size: clamp(2rem, 1.5rem + 2vw, 3rem);
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
+}
+
+.page-header p {
+    max-width: 60ch;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1.075rem;
+    line-height: 1.6;
+}
+
+/* ========== PAGE LAYOUT (2 colunas: conteúdo + sidebar) ========== */
+
+.page-layout {
+    display: grid;
+    gap: 2.5rem;
+    margin-top: -2.5rem;
+}
+
+@media (min-width: 1000px) {
+    .page-layout {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 300px);
+        gap: 3.5rem;
+        align-items: start;
+    }
+}
+
+/* ========== CONTEÚDO PRINCIPAL ========== */
+
+.page-content {
+    display: grid;
+    gap: 3rem;
+}
+
+.content-block {
+    padding: clamp(1.75rem, 4vw, 2.5rem);
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    animation: reveal-up var(--duration-long) ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .content-block {
+        animation: none;
+    }
+}
+
+.content-block h2 {
+    font-size: clamp(1.5rem, 1.2rem + 1vw, 1.9rem);
+    margin-bottom: 1rem;
+    color: var(--azul-900);
+}
+
+.content-block h3 {
+    font-size: 1.2rem;
+    color: var(--azul-900);
+}
+
+.content-block > p {
+    max-width: 70ch;
+    color: var(--muted);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.content-block > p:last-of-type {
+    margin-bottom: 0;
+}
+
+/* ========== CARDS DE VALORES ========== */
+
+.values-grid {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+@media (min-width: 700px) {
+    .values-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+.value-card {
+    padding: 1.35rem;
+    background: var(--azul-100);
+    border-left: 3px solid var(--verde-600);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    transition: transform var(--duration) ease, box-shadow var(--duration) ease;
+}
+
+.value-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(29, 78, 126, 0.1);
+}
+
+.value-card h3 {
+    margin-bottom: 0.5rem;
+    color: var(--azul-900);
+    font-size: 1.05rem;
+}
+
+.value-card p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* ========== PILARES (4 colunas no desktop) ========== */
+
+.pillars {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+@media (min-width: 900px) {
+    .pillars {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 600px) and (max-width: 899px) {
+    .pillars {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+.pillar {
+    padding: 1.35rem;
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    text-align: center;
+    transition: border-color var(--duration) ease, box-shadow var(--duration) ease;
+}
+
+.pillar:hover {
+    border-color: var(--verde-600);
+    box-shadow: 0 4px 12px rgba(23, 120, 90, 0.1);
+}
+
+.pillar h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.6rem;
+    color: var(--azul-900);
+}
+
+.pillar p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* ========== SIDEBAR ========== */
+
+.sidebar {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.sidebar-box {
+    padding: clamp(1.35rem, 3vw, 1.75rem);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+}
+
+.sidebar-box h3 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: var(--azul-900);
+    font-weight: 600;
+}
+
+.sidebar-box ul {
+    display: grid;
+    gap: 0;
+}
+
+.sidebar-box li {
+    border-bottom: 1px solid var(--line);
+}
+
+.sidebar-box li:last-child {
+    border-bottom: none;
+}
+
+.sidebar-box a {
+    display: block;
+    padding: 0.75rem 0;
+    color: var(--azul-700);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color var(--duration) ease, padding-left var(--duration) ease;
+}
+
+.sidebar-box a:hover {
+    color: var(--verde-600);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    padding-left: 0.5rem;
+}
+
+.sidebar-box a:focus {
+    outline: 2px solid var(--focus);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+/* Estilos de parágrafo no sidebar */
+.sidebar-box p {
+    margin: 0 0 1rem;
+    color: var(--muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.sidebar-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* ========== LINKS DE DOCUMENTOS ========== */
+
+.document-links {
+    display: grid;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.document-link {
+    display: flex;
+    gap: 0.75rem;
+    align-items: baseline;
+    padding: 0.75rem;
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    color: var(--azul-700);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all var(--duration) ease;
+}
+
+.document-link:hover {
+    background: var(--azul-100);
+    border-color: var(--azul-700);
+    transform: translateX(4px);
+}
+
+.document-link:focus {
+    outline: 2px solid var(--focus);
+    outline-offset: 2px;
+}
+
+.document-link::before {
+    content: "📄";
+    flex-shrink: 0;
+    font-size: 1.2em;
+}
+
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+/* ========== CALL-TO-ACTION ========== */
+
+.call-to-action {
+    padding: clamp(2rem, 4vw, 3rem);
+    background: var(--verde-100);
+    border-left: 4px solid var(--verde-600);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    animation: reveal-up var(--duration-long) 0.2s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .call-to-action {
+        animation: none;
+    }
+}
+
+.call-to-action h3 {
+    color: var(--azul-900);
+    margin-bottom: 0.75rem;
+    font-size: 1.35rem;
+}
+
+.call-to-action p {
+    color: var(--muted);
+    margin-bottom: 1.5rem;
+    max-width: 60ch;
+}
+
+/* ========== REVEAL (animação de entrada) ========== */
+
+.reveal {
+    animation: reveal-up var(--duration-long) ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        animation: none;
+    }
+}
+
+@keyframes reveal-up {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========== RESPONSIVIDADE ========== */
+
+@media (max-width: 999px) {
+    .page-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        order: -1;
+        gap: 2rem;
+    }
+
+    .sidebar-box {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.5rem;
+    }
+
+    .sidebar-box h3 {
+        grid-column: 1 / -1;
+        margin-bottom: 0;
+    }
+
+    .sidebar-box ul {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 599px) {
+    .sidebar-box {
+        display: block;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pillars {
+        grid-template-columns: 1fr;
+    }
+
+    .page-header h1 {
+        font-size: 1.75rem;
+    }
+
+    .content-block {
+        padding: 1.35rem;
+    }
+}
+
+/* ========== ACESSIBILIDADE ========== */
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Focus visível para navegação com teclado */
+a:focus,
+button:focus {
+    outline: 2px solid var(--focus);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+button:focus {
+    outline-offset: -2px;
+}
+
+/* ========== UTILITÁRIOS ========== */
+
+.container {
+    max-width: var(--container);
+    margin-inline: auto;
+    padding-inline: clamp(1rem, 4vw, 2rem);
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border: 1px solid transparent;
+    border-radius: var(--radius-sm);
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all var(--duration) ease;
+}
+
+.btn--outline {
+    background: transparent;
+    border-color: var(--azul-700);
+    color: var(--azul-700);
+}
+
+.btn--outline:hover {
+    background: var(--azul-100);
+    border-color: var(--azul-900);
+    color: var(--azul-900);
+}
+
+.btn--outline:focus {
+    outline: 2px solid var(--focus);
+    outline-offset: 2px;
+}

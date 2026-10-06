@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Projetos em Destaque | IBAP-RJ</title>
+    <meta name="description" content="Conheça os projetos de consultoria, governança e gestão pública desenvolvidos pelo IBAP-RJ.">
+    <meta name="canonical" href="https://ibap-rj.org.br/projetos/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="IBAP-RJ">
+    <meta property="og:title" content="Projetos em Destaque | IBAP-RJ">
+    <meta property="og:description" content="Projetos de consultoria e gestão pública do IBAP-RJ.">
+    <meta property="og:url" content="https://ibap-rj.org.br/projetos/">
+
+    <link rel="icon" href="https://ibap-rj.org.br/wp-content/uploads/2023/09/ibap-rj-icon-32x32-1.png" sizes="32x32">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        :root {
+            --azul-950: #0a1d33;
+            --azul-900: #0e2a47;
+            --azul-700: #1d4e7e;
+            --azul-100: #e8f0f8;
+            --verde-600: #17785a;
+            --verde-100: #e8f3f0;
+            --ink: #1a1a1a;
+            --muted: #666;
+            --line: #ddd;
+            --surface: #f9f9f9;
+            --white: #fff;
+            --focus: #0066cc;
+
+            --font-sans: 'Public Sans', system-ui, sans-serif;
+            --font-serif: 'Source Serif 4', Georgia, serif;
+            --shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+            --radius-sm: 6px;
+            --radius: 12px;
+            --radius-lg: 16px;
+            --container: 1200px;
+            --header-height: 76px;
+            --duration: 300ms;
+            --duration-long: 600ms;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--ink);
+            background: var(--white);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-serif);
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .container {
+            max-width: var(--container);
+            margin-inline: auto;
+            padding-inline: clamp(1rem, 4vw, 2rem);
+        }
+
+        .skip-link {
+            position: absolute;
+            left: -10000px;
+            background: #000;
+            color: #fff;
+            padding: 6px;
+            z-index: 10000;
+        }
+
+        /* ========== UTILITY BAR ========== */
+        .utility-bar {
+            background: var(--azul-950);
+            color: var(--white);
+            padding-block: 0.75rem;
+            font-size: 0.85rem;
+            border-bottom: 1px solid var(--azul-900);
+        }
+
+        .utility-bar__inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .utility-bar__phone {
+            margin: 0;
+        }
+
+        .utility-bar__phone a {
+            color: var(--white);
+        }
+
+        .utility-bar__links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .utility-bar__links a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+        }
+
+        .utility-bar__links a:hover {
+            color: var(--white);
+        }
+
+        @media (max-width: 700px) {
+            .utility-bar__inner {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .utility-bar__links {
+                gap: 1rem;
+                font-size: 0.8rem;
+            }
+        }
+
+        /* ========== HEADER ========== */
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: var(--white);
+            border-bottom: 1px solid var(--line);
+            height: var(--header-height);
+        }
+
+        .site-header.sticky {
+            box-shadow: var(--shadow);
+        }
+
+        .site-header__inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+            height: 100%;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .brand__logo {
+            height: 50px;
+            width: auto;
+        }
+
+        .main-nav {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-left: auto;
+        }
+
+        .main-nav__list {
+            display: flex;
+            list-style: none;
+            gap: 0;
+        }
+
+        .main-nav__link {
+            display: block;
+            padding: 0.5rem 1rem;
+            color: var(--azul-700);
+            font-weight: 500;
+            text-decoration: none;
+            transition: color var(--duration) ease;
+        }
+
+        .main-nav__link:hover {
+            color: var(--verde-600);
+        }
+
+        /* ========== BREADCRUMB ========== */
+        .breadcrumb {
+            padding-block: 1rem;
+            font-size: 0.9rem;
+            color: var(--muted);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .breadcrumb a {
+            color: var(--azul-700);
+            text-decoration: none;
+        }
+
+        /* ========== PAGE HEADER ========== */
+        .page-header {
+            padding-block: clamp(2.5rem, 5vw, 4rem);
+            background: var(--azul-900);
+            color: var(--white);
+        }
+
+        .page-header h1 {
+            color: var(--white);
+            font-size: clamp(2rem, 1.5rem + 2vw, 3rem);
+            margin-bottom: 0.75rem;
+        }
+
+        .page-header p {
+            max-width: 60ch;
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 1.075rem;
+        }
+
+        /* ========== PAGE LAYOUT ========== */
+        .page-layout {
+            display: grid;
+            gap: 2.5rem;
+            margin-top: -2.5rem;
+        }
+
+        @media (min-width: 1000px) {
+            .page-layout {
+                grid-template-columns: 1fr minmax(0, 300px);
+                gap: 3.5rem;
+                align-items: start;
+            }
+        }
+
+        /* ========== CONTENT BLOCKS ========== */
+        .content-block {
+            padding: clamp(1.75rem, 4vw, 2.5rem);
+            background: var(--white);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            animation: reveal-up var(--duration-long) ease-out;
+        }
+
+        @keyframes reveal-up {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .content-block h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--azul-900);
+        }
+
+        .content-block > p {
+            color: var(--muted);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        /* ========== PROJECTS GRID ========== */
+        .projects-grid {
+            display: grid;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        @media (min-width: 700px) {
+            .projects-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (min-width: 1000px) {
+            .projects-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        .project-card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            overflow: hidden;
+            transition: all var(--duration) ease;
+            animation: reveal-up var(--duration-long) ease-out;
+        }
+
+        .project-card:hover {
+            border-color: var(--verde-600);
+            box-shadow: 0 12px 32px rgba(23, 120, 90, 0.15);
+            transform: translateY(-8px);
+        }
+
+        .project-card__image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background: var(--surface);
+        }
+
+        .project-card__content {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            padding: 1.5rem;
+        }
+
+        .project-card__category {
+            display: inline-block;
+            width: fit-content;
+            padding: 0.35rem 0.85rem;
+            background: var(--azul-100);
+            color: var(--azul-700);
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.75rem;
+        }
+
+        .project-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--azul-900);
+            line-height: 1.3;
+        }
+
+        .project-card__description {
+            color: var(--muted);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+            flex: 1;
+            font-size: 0.95rem;
+        }
+
+        .project-card__meta {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.85rem;
+            color: var(--muted);
+            margin-bottom: 1rem;
+            border-top: 1px solid var(--line);
+            padding-top: 1rem;
+        }
+
+        .project-card__cta {
+            display: inline-block;
+            padding: 0.6rem 1.2rem;
+            background: var(--verde-600);
+            color: var(--white);
+            border: none;
+            border-radius: var(--radius-sm);
+            font-weight: 500;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all var(--duration) ease;
+            font-size: 0.9rem;
+            align-self: flex-start;
+        }
+
+        .project-card__cta:hover {
+            background: #12593f;
+            text-decoration: none;
+        }
+
+        /* ========== TESTIMONIALS ========== */
+        .testimonials {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        @media (min-width: 700px) {
+            .testimonials {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        .testimonial {
+            padding: 1.5rem;
+            background: var(--azul-100);
+            border-radius: var(--radius);
+            border-left: 3px solid var(--verde-600);
+        }
+
+        .testimonial__quote {
+            color: var(--azul-900);
+            font-style: italic;
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .testimonial__author {
+            color: var(--muted);
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        /* ========== CTA SECTION ========== */
+        .call-to-action {
+            padding: clamp(2rem, 4vw, 3rem);
+            background: var(--verde-100);
+            border-left: 4px solid var(--verde-600);
+            border-radius: 0 var(--radius) var(--radius) 0;
+            animation: reveal-up var(--duration-long) 0.2s ease-out;
+        }
+
+        .call-to-action h3 {
+            color: var(--azul-900);
+            margin-bottom: 0.75rem;
+            font-size: 1.35rem;
+        }
+
+        .call-to-action p {
+            color: var(--muted);
+            margin-bottom: 1.5rem;
+            max-width: 60ch;
+        }
+
+        .cta-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: var(--verde-600);
+            color: var(--white);
+            border: none;
+            border-radius: var(--radius-sm);
+            font-weight: 500;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all var(--duration) ease;
+        }
+
+        .btn:hover {
+            background: #12593f;
+        }
+
+        .btn--outline {
+            background: transparent;
+            border: 1px solid var(--azul-700);
+            color: var(--azul-700);
+        }
+
+        .btn--outline:hover {
+            background: var(--azul-100);
+            border-color: var(--azul-900);
+        }
+
+        /* ========== SIDEBAR ========== */
+        .sidebar {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .sidebar-box {
+            padding: 1.5rem;
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+        }
+
+        .sidebar-box h3 {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            color: var(--azul-900);
+            font-weight: 600;
+        }
+
+        .sidebar-box ul {
+            display: grid;
+            gap: 0;
+        }
+
+        .sidebar-box li {
+            border-bottom: 1px solid var(--line);
+        }
+
+        .sidebar-box li:last-child {
+            border-bottom: none;
+        }
+
+        .sidebar-box a {
+            display: block;
+            padding: 0.75rem 0;
+            color: var(--azul-700);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color var(--duration) ease;
+        }
+
+        .sidebar-box a:hover {
+            color: var(--verde-600);
+            text-decoration: underline;
+        }
+
+        /* ========== FOOTER ========== */
+        .site-footer {
+            background: var(--azul-950);
+            color: var(--white);
+            padding-top: 3rem;
+            padding-bottom: 1.5rem;
+            margin-top: 4rem;
+        }
+
+        .site-footer__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .site-footer__title {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--white);
+        }
+
+        .site-footer nav ul {
+            list-style: none;
+            display: grid;
+            gap: 0.5rem;
+        }
+
+        .site-footer a {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: color var(--duration) ease;
+        }
+
+        .site-footer a:hover {
+            color: var(--white);
+        }
+
+        .site-footer__bottom {
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .site-footer__bottom p {
+            margin: 0.25rem 0;
+        }
+
+        /* ========== RESPONSIVIDADE ========== */
+        @media (max-width: 999px) {
+            .page-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                display: none;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonials {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 599px) {
+            .page-header h1 {
+                font-size: 1.75rem;
+            }
+
+            .content-block {
+                padding: 1.35rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+
+    <script src="../js/script.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <!-- Barra de acesso rápido -->
+    <div class="utility-bar">
+        <div class="container utility-bar__inner">
+            <p class="utility-bar__phone">Atendimento: <a href="tel:+552138061000">(21) 3806-1000</a></p>
+            <nav aria-label="Acesso rápido">
+                <ul class="utility-bar__links">
+                    <li><a href="https://ibap-rj.org.br/categoria-transparencia/ibap-rj/">Transparência</a></li>
+                    <li><a href="https://ibap-rj.org.br/categoria-transparencia/editais/">Editais</a></li>
+                    <li><a href="http://200.146.211.21/IBAPCC/">Contracheque</a></li>
+                    <li><a href="https://ibap-rj.org.br/ponto-ibap/">Ponto IBAP</a></li>
+                    <li><a href="mailto:denuncias@ibap-rj.org.br">Canal de denúncias</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Cabeçalho -->
+    <header class="site-header">
+        <div class="container site-header__inner">
+            <a class="brand" href="/">
+                <img class="brand__logo" src="https://ibap-rj.org.br/wp-content/uploads/2023/09/iba-rj-logo.jpg" alt="IBAP-RJ">
+            </a>
+
+            <nav class="main-nav" id="main-nav" aria-label="Principal">
+                <ul class="main-nav__list">
+                    <li><a class="main-nav__link" href="/">Home</a></li>
+                    <li><a class="main-nav__link" href="/sobre.html">Sobre</a></li>
+                    <li><a class="main-nav__link" href="/atuacao.html">Atuação</a></li>
+                    <li><a class="main-nav__link" href="/projetos.html">Projetos</a></li>
+                    <li><a class="main-nav__link" href="/boletim.html">Boletim</a></li>
+                    <li><a class="main-nav__link" href="/contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <nav class="container breadcrumb" aria-label="Caminho da página">
+        <a href="/">Home</a> / 
+        <strong>Projetos</strong>
+    </nav>
+
+    <!-- Hero -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Projetos em Destaque</h1>
+            <p>Conheça os projetos transformadores que o IBAP-RJ desenvolveu para instituições públicas e privadas em gestão, governança e inovação.</p>
+        </div>
+    </section>
+
+    <!-- Conteúdo principal -->
+    <main id="conteudo">
+        <div class="container page-layout">
+            <article>
+                <!-- Introdução -->
+                <section class="content-block">
+                    <h2>Nossa Experiência em Projetos</h2>
+                    <p>Com mais de 20 anos de atuação, o IBAP-RJ tem desenvolvido projetos estruturantes em múltiplas linhas de atuação. Cada projeto reflete nosso compromisso com resultados mensuráveis e transformação institucional.</p>
+                </section>
+
+                <!-- Grid de Projetos -->
+                <div class="projects-grid">
+                    <!-- Projeto 1 -->
+                    <div class="project-card">
+                        <img class="project-card__image" src="https://ibap-rj.org.br/wp-content/uploads/2023/09/projeto-governanca.jpg" alt="Projeto de Governança">
+                        <div class="project-card__content">
+                            <span class="project-card__category">Governança</span>
+                            <h3>Diagnóstico de Governança Institucional</h3>
+                            <p class="project-card__description">Implementação de modelo de governança para entidade pública estadual, incluindo diagnóstico, desenho de políticas e capacitação de gestores.</p>
+                            <div class="project-card__meta">
+                                <span>🏛️ Setor Público</span>
+                                <span>📅 2023-2024</span>
+                            </div>
+                            <a href="/contato.html" class="project-card__cta">Ver detalhes</a>
+                        </div>
+                    </div>
+
+                    <!-- Projeto 2 -->
+                    <div class="project-card">
+                        <img class="project-card__image" src="https://ibap-rj.org.br/wp-content/uploads/2023/09/projeto-gestao.jpg" alt="Projeto de Gestão para Resultados">
+                        <div class="project-card__content">
+                            <span class="project-card__category">Gestão</span>
+                            <h3>Gestão Integrada para Resultados</h3>
+                            <p class="project-card__description">Implementação de modelo de gestão integrada com painéis de controle, indicadores de desempenho e sistema de avaliação de resultados.</p>
+                            <div class="project-card__meta">
+                                <span>🎯 Estratégia</span>
+                                <span>📅 2023</span>
+                            </div>
+                            <a href="/contato.html" class="project-card__cta">Ver detalhes</a>
+                        </div>
+                    </div>
+
+                    <!-- Projeto 3 -->
+                    <div class="project-card">
+                        <img class="project-card__image" src="https://ibap-rj.org.br/wp-content/uploads/2023/09/projeto-pessoas.jpg" alt="Projeto de Desenvolvimento de Pessoas">
+                        <div class="project-card__content">
+                            <span class="project-card__category">Pessoas</span>
+                            <h3>Programa de Desenvolvimento de Lideranças</h3>
+                            <p class="project-card__description">Programa de capacitação executiva e desenvolvimento de competências para gestores de órgão público federal, com avaliação de impacto.</p>
+                            <div class="project-card__meta">
+                                <span>👥 RH</span>
+                                <span>📅 2022-2023</span>
+                            </div>
+                            <a href="/contato.html" class="project-card__cta">Ver detalhes</a>
+                        </div>
+                    </div>
+
+                    <!-- Projeto 4 -->
+                    <div class="project-card">
+                        <img class="project-card__image" src="https://ibap-rj.org.br/wp-content/uploads/2023/09/projeto-processos.jpg" alt="Projeto de Processos Seletivos">
+                        <div class="project-card__content">
+                            <span class="project-card__category">Seleção</span>
+                            <h3>Concurso Público Inovador</h3>
+                            <p class="project-card__description">Desenho, condução e avaliação de processo seletivo público com metodologias inovadoras, incluindo avaliação comportamental e entrevista estruturada.</p>
+                            <div class="project-card__meta">
+                                <span>🔍 Recrutamento</span>
+                                <span>📅 2024</span>
+                            </div>
+                            <a href="/contato.html" class="project-card__cta">Ver detalhes</a>
+                        </div>
+                    </div>
+
+                    <!-- Projeto 5 -->
+                    <div class="project-card">
+                        <img class="project-card__image" src="https://ibap-rj.org.br/wp-content/uploads/2023/09/projeto-ti.jpg" alt="Projeto de Transformação Digital">
+                        <div class="project-card__content">
+                            <span class="project-card__category">Tecnologia</span>
+                            <h3>Diagnóstico e Plano de Transformação Digital</h3>
+                            <p class="project-card__description">Diagnóstico de infraestrutura de TI, identificação de gaps e elaboração de plano de transformação digital para modernização de processos.</p>
+                            <div class="project-card__meta">
+                                <span>💻 Digital</span>
+                                <span>📅 2023</span>
+                            </div>
+                            <a href="/contato.html" class="project-card__cta">Ver detalhes</a>
+                        </div>
+                    </div>
+
+                    <!-- Projeto 6 -->
+                    <div class="project-card">
+                        <img class="project-card__image" src="https://ibap-rj.org.br/wp-content/uploads/2023/09/projeto-social.jpg" alt="Projeto de Gestão Social">
+                        <div class="project-card__content">
+                            <span class="project-card__category">Sustentabilidade</span>
+                            <h3>Programa de Responsabilidade Social Empresarial</h3>
+                            <p class="project-card__description">Diagnóstico de impacto social, desenho de programa de RSE alinhado aos ODS e implementação de projetos comunitários com medição de resultados.</p>
+                            <div class="project-card__meta">
+                                <span>🌱 ODS</span>
+                                <span>📅 2023-2024</span>
+                            </div>
+                            <a href="/contato.html" class="project-card__cta">Ver detalhes</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Depoimentos -->
+                <section class="content-block" style="margin-top: 3rem;">
+                    <h2>Depoimentos de Clientes</h2>
+                    <p>Confira o que nossos clientes dizem sobre os resultados dos projetos desenvolvidos pelo IBAP-RJ.</p>
+
+                    <div class="testimonials">
+                        <div class="testimonial">
+                            <p class="testimonial__quote">"O IBAP-RJ trouxe uma visão estratégica essencial para nossa governança. Os resultados foram mensuráveis e a equipe foi muito profissional."</p>
+                            <p class="testimonial__author">— Diretor Executivo, Entidade Pública Federal</p>
+                        </div>
+
+                        <div class="testimonial">
+                            <p class="testimonial__quote">"A metodologia de gestão para resultados implementada mudou a forma como gerenciamos nossos indicadores. Excelente ROI."</p>
+                            <p class="testimonial__author">— Coordenadora de Estratégia, Secretaria de Estado</p>
+                        </div>
+
+                        <div class="testimonial">
+                            <p class="testimonial__quote">"O programa de desenvolvimento de lideranças transformou nosso corpo gestor. Recomendamos fortemente o IBAP-RJ a qualquer instituição."</p>
+                            <p class="testimonial__author">— Gerente de RH, Ministério</p>
+                        </div>
+
+                        <div class="testimonial">
+                            <p class="testimonial__quote">"Condução exemplar do concurso público. Transparência, rigor técnico e metodologia inovadora. Todos os objetivos foram alcançados."</p>
+                            <p class="testimonial__author">— Presidente da Banca, Órgão Colegiado</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Call to Action -->
+                <section class="call-to-action">
+                    <h3>Transforme sua organização com nossos projetos</h3>
+                    <p>Nossas soluções são customizadas para suas necessidades específicas. Vamos conversar sobre como o IBAP-RJ pode contribuir para o sucesso da sua instituição.</p>
+                    <div class="cta-buttons">
+                        <a class="btn" href="/contato.html">Solicitar consultoria</a>
+                        <a class="btn btn--outline" href="/atuacao.html">Ver linhas de atuação</a>
+                    </div>
+                </section>
+            </article>
+
+            <!-- Sidebar -->
+            <aside class="sidebar" aria-label="Menu lateral" style="display: none;">
+                <div class="sidebar-box">
+                    <h3>Categorias de Projetos</h3>
+                    <ul>
+                        <li><a href="#governanca">Governança</a></li>
+                        <li><a href="#gestao">Gestão para Resultados</a></li>
+                        <li><a href="#pessoas">Desenvolvimento de Pessoas</a></li>
+                        <li><a href="#processos">Processos Seletivos</a></li>
+                        <li><a href="#tecnologia">Transformação Digital</a></li>
+                        <li><a href="#social">Gestão Social</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-box">
+                    <h3>Contato rápido</h3>
+                    <p style="margin: 0; color: var(--muted); font-size: 0.9rem; line-height: 1.6;">
+                        <strong>Telefone:</strong><br>
+                        <a href="tel:+552138061000" style="color: var(--azul-700);">(21) 3806-1000</a>
+                    </p>
+                    <p style="margin: 1rem 0 0; color: var(--muted); font-size: 0.9rem; line-height: 1.6;">
+                        <strong>Email:</strong><br>
+                        <a href="mailto:ibap-rj@ibap-rj.org.br" style="color: var(--azul-700);">ibap-rj@ibap-rj.org.br</a>
+                    </p>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="site-footer">
+        <div class="container site-footer__grid">
+            <div>
+                <p style="font-size: 1.35rem; font-weight: 700; margin-bottom: 0.5rem;">IBAP-RJ</p>
+                <p style="font-size: 0.9rem; line-height: 1.6; color: rgba(255, 255, 255, 0.8);">Instituto Brasileiro de Administração Pública. Sociedade civil sem fins lucrativos desde 2002.</p>
+            </div>
+
+            <nav>
+                <h2 class="site-footer__title">Instituto</h2>
+                <ul>
+                    <li><a href="/sobre.html">Quem somos</a></li>
+                    <li><a href="/atuacao.html">Linhas de atuação</a></li>
+                    <li><a href="/historico.html">Histórico</a></li>
+                    <li><a href="/responsabilidade-social.html">Responsabilidade social</a></li>
+                    <li><a href="/certificacoes.html">Certificações</a></li>
+                </ul>
+            </nav>
+
+            <nav>
+                <h2 class="site-footer__title">Consultoria</h2>
+                <ul>
+                    <li><a href="/atuacao.html">Linhas de atuação</a></li>
+                    <li><a href="/projetos.html">Projetos</a></li>
+                    <li><a href="/boletim.html">Boletim IBAP-RJ</a></li>
+                    <li><a href="/contato.html">Contato</a></li>
+                </ul>
+            </nav>
+
+            <nav>
+                <h2 class="site-footer__title">Transparência</h2>
+                <ul>
+                    <li><a href="https://ibap-rj.org.br/categoria-transparencia/ibap-rj/">Compliance</a></li>
+                    <li><a href="https://ibap-rj.org.br/categoria-transparencia/editais/">Editais</a></li>
+                    <li><a href="https://ibap-rj.org.br/categoria-transparencia/relatorio-de-transparencia-salarial/">Relatórios</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="container site-footer__bottom">
+            <p>© <span id="year">2026</span> IBAP-RJ. Todos os direitos reservados.</p>
+            <p>Rua Buenos Aires, 68, 31º andar, Rio de Janeiro – RJ</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

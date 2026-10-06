@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Certificações e Acreditações | IBAP-RJ</title>
+    <meta name="description" content="Conheça as certificações, acreditações e credenciais que comprovam a excelência e qualidade do IBAP-RJ.">
+    <meta name="canonical" href="https://ibap-rj.org.br/certificacoes/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="IBAP-RJ">
+    <meta property="og:title" content="Certificações | IBAP-RJ">
+    <meta property="og:description" content="Certificações e credenciais do IBAP-RJ.">
+    <meta property="og:url" content="https://ibap-rj.org.br/certificacoes/">
+
+    <link rel="icon" href="https://ibap-rj.org.br/wp-content/uploads/2023/09/ibap-rj-icon-32x32-1.png" sizes="32x32">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        :root {
+            --azul-950: #0a1d33;
+            --azul-900: #0e2a47;
+            --azul-700: #1d4e7e;
+            --azul-100: #e8f0f8;
+            --verde-600: #17785a;
+            --verde-100: #e8f3f0;
+            --ink: #1a1a1a;
+            --muted: #666;
+            --line: #ddd;
+            --surface: #f9f9f9;
+            --white: #fff;
+
+            --font-sans: 'Public Sans', system-ui, sans-serif;
+            --font-serif: 'Source Serif 4', Georgia, serif;
+            --shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+            --radius-sm: 6px;
+            --radius: 12px;
+            --radius-lg: 16px;
+            --container: 1200px;
+            --header-height: 76px;
+            --duration: 300ms;
+            --duration-long: 600ms;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--ink);
+            background: var(--white);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-serif);
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .container {
+            max-width: var(--container);
+            margin-inline: auto;
+            padding-inline: clamp(1rem, 4vw, 2rem);
+        }
+
+        .skip-link {
+            position: absolute;
+            left: -10000px;
+            background: #000;
+            color: #fff;
+            padding: 6px;
+            z-index: 10000;
+        }
+
+        /* ========== UTILITY BAR ========== */
+        .utility-bar {
+            background: var(--azul-950);
+            color: var(--white);
+            padding-block: 0.75rem;
+            font-size: 0.85rem;
+            border-bottom: 1px solid var(--azul-900);
+        }
+
+        .utility-bar__inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .utility-bar__phone {
+            margin: 0;
+        }
+
+        .utility-bar__phone a {
+            color: var(--white);
+        }
+
+        .utility-bar__links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .utility-bar__links a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+        }
+
+        .utility-bar__links a:hover {
+            color: var(--white);
+        }
+
+        @media (max-width: 700px) {
+            .utility-bar__inner {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .utility-bar__links {
+                gap: 1rem;
+                font-size: 0.8rem;
+            }
+        }
+
+        /* ========== HEADER ========== */
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: var(--white);
+            border-bottom: 1px solid var(--line);
+            height: var(--header-height);
+        }
+
+        .site-header.sticky {
+            box-shadow: var(--shadow);
+        }
+
+        .site-header__inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+            height: 100%;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .brand__logo {
+            height: 50px;
+            width: auto;
+        }
+
+        .main-nav {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-left: auto;
+        }
+
+        .main-nav__list {
+            display: flex;
+            list-style: none;
+            gap: 0;
+        }
+
+        .main-nav__link {
+            display: block;
+            padding: 0.5rem 1rem;
+            color: var(--azul-700);
+            font-weight: 500;
+            text-decoration: none;
+            transition: color var(--duration) ease;
+        }
+
+        .main-nav__link:hover {
+            color: var(--verde-600);
+        }
+
+        /* ========== BREADCRUMB ========== */
+        .breadcrumb {
+            padding-block: 1rem;
+            font-size: 0.9rem;
+            color: var(--muted);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .breadcrumb a {
+            color: var(--azul-700);
+            text-decoration: none;
+        }
+
+        /* ========== PAGE HEADER ========== */
+        .page-header {
+            padding-block: clamp(2.5rem, 5vw, 4rem);
+            background: var(--azul-900);
+            color: var(--white);
+        }
+
+        .page-header h1 {
+            color: var(--white);
+            font-size: clamp(2rem, 1.5rem + 2vw, 3rem);
+            margin-bottom: 0.75rem;
+        }
+
+        .page-header p {
+            max-width: 60ch;
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 1.075rem;
+        }
+
+        /* ========== PAGE LAYOUT ========== */
+        .page-layout {
+            display: grid;
+            gap: 2.5rem;
+            margin-top: -2.5rem;
+        }
+
+        @media (min-width: 1000px) {
+            .page-layout {
+                grid-template-columns: 1fr minmax(0, 280px);
+                gap: 3.5rem;
+            }
+        }
+
+        /* ========== CONTENT BLOCKS ========== */
+        .content-block {
+            padding: clamp(1.75rem, 4vw, 2.5rem);
+            background: var(--white);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            animation: reveal-up var(--duration-long) ease-out;
+        }
+
+        @keyframes reveal-up {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .content-block h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--azul-900);
+        }
+
+        .content-block > p {
+            color: var(--muted);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        /* ========== CERTIFICATIONS GRID ========== */
+        .certifications-grid {
+            display: grid;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        @media (min-width: 700px) {
+            .certifications-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+        }
+
+        .certification-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem 1.5rem;
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            text-align: center;
+            transition: all var(--duration) ease;
+            animation: reveal-up var(--duration-long) ease-out;
+        }
+
+        .certification-card:hover {
+            border-color: var(--verde-600);
+            box-shadow: 0 12px 32px rgba(23, 120, 90, 0.15);
+            background: var(--verde-100);
+            transform: translateY(-8px);
+        }
+
+        .certification-card__icon {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .certification-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--azul-900);
+        }
+
+        .certification-card p {
+            color: var(--muted);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* ========== TIMELINE ========== */
+        .timeline {
+            display: grid;
+            gap: 2rem;
+            margin-top: 1.5rem;
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--line);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -1.25rem;
+            top: 0.25rem;
+            width: 1.5rem;
+            height: 1.5rem;
+            background: var(--verde-600);
+            border: 2px solid var(--white);
+            border-radius: 50%;
+            box-shadow: 0 0 0 3px var(--green-600);
+        }
+
+        .timeline-item h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+            color: var(--azul-900);
+        }
+
+        .timeline-item .year {
+            font-weight: 600;
+            color: var(--verde-600);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-item p {
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
+        /* ========== BADGES GRID ========== */
+        .badges-grid {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        @media (min-width: 700px) {
+            .badges-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        .badge-item {
+            display: flex;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            background: var(--azul-100);
+            border-left: 3px solid var(--azul-700);
+            border-radius: var(--radius-sm);
+        }
+
+        .badge-item__icon {
+            font-size: 2.5rem;
+            flex-shrink: 0;
+        }
+
+        .badge-item h3 {
+            font-size: 1.05rem;
+            margin-bottom: 0.25rem;
+            color: var(--azul-900);
+        }
+
+        .badge-item p {
+            color: var(--muted);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* ========== SIDEBAR ========== */
+        .sidebar {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .sidebar-box {
+            padding: 1.5rem;
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+        }
+
+        .sidebar-box h3 {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            color: var(--azul-900);
+            font-weight: 600;
+        }
+
+        .sidebar-box ul {
+            display: grid;
+            gap: 0.75rem;
+            list-style: none;
+        }
+
+        .sidebar-box a {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--azul-700);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color var(--duration) ease;
+        }
+
+        .sidebar-box a:hover {
+            color: var(--verde-600);
+        }
+
+        /* ========== FOOTER ========== */
+        .site-footer {
+            background: var(--azul-950);
+            color: var(--white);
+            padding-top: 3rem;
+            padding-bottom: 1.5rem;
+            margin-top: 4rem;
+        }
+
+        .site-footer__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .site-footer__title {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--white);
+        }
+
+        .site-footer nav ul {
+            list-style: none;
+            display: grid;
+            gap: 0.5rem;
+        }
+
+        .site-footer a {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: color var(--duration) ease;
+        }
+
+        .site-footer a:hover {
+            color: var(--white);
+        }
+
+        .site-footer__bottom {
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .site-footer__bottom p {
+            margin: 0.25rem 0;
+        }
+
+        /* ========== RESPONSIVIDADE ========== */
+        @media (max-width: 999px) {
+            .page-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                display: none;
+            }
+
+            .certifications-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 599px) {
+            .page-header h1 {
+                font-size: 1.75rem;
+            }
+
+            .content-block {
+                padding: 1.35rem;
+            }
+
+            .certifications-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .badges-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .certification-card {
+                padding: 1.5rem 1rem;
+            }
+
+            .certification-card__icon {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+
+    <script src="../js/script.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <!-- Barra de acesso rápido -->
+    <div class="utility-bar">
+        <div class="container utility-bar__inner">
+            <p class="utility-bar__phone">Atendimento: <a href="tel:+552138061000">(21) 3806-1000</a></p>
+            <nav aria-label="Acesso rápido">
+                <ul class="utility-bar__links">
+                    <li><a href="https://ibap-rj.org.br/categoria-transparencia/ibap-rj/">Transparência</a></li>
+                    <li><a href="https://ibap-rj.org.br/categoria-transparencia/editais/">Editais</a></li>
+                    <li><a href="http://200.146.211.21/IBAPCC/">Contracheque</a></li>
+                    <li><a href="https://ibap-rj.org.br/ponto-ibap/">Ponto IBAP</a></li>
+                    <li><a href="mailto:denuncias@ibap-rj.org.br">Canal de denúncias</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Cabeçalho -->
+    <header class="site-header">
+        <div class="container site-header__inner">
+            <a class="brand" href="/">
+                <img class="brand__logo" src="https://ibap-rj.org.br/wp-content/uploads/2023/09/iba-rj-logo.jpg" alt="IBAP-RJ">
+            </a>
+
+            <nav class="main-nav" id="main-nav" aria-label="Principal">
+                <ul class="main-nav__list">
+                    <li><a class="main-nav__link" href="/">Home</a></li>
+                    <li><a class="main-nav__link" href="/sobre.html">Sobre</a></li>
+                    <li><a class="main-nav__link" href="/atuacao.html">Atuação</a></li>
+                    <li><a class="main-nav__link" href="/projetos.html">Projetos</a></li>
+                    <li><a class="main-nav__link" href="/boletim.html">Boletim</a></li>
+                    <li><a class="main-nav__link" href="/contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <nav class="container breadcrumb" aria-label="Caminho da página">
+        <a href="/">Home</a> / 
+        <strong>Certificações</strong>
+    </nav>
+
+    <!-- Hero -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Certificações e Acreditações</h1>
+            <p>Conheça as certificações e credenciais que comprovam a excelência, qualidade e conformidade de nossos serviços e processos.</p>
+        </div>
+    </section>
+
+    <!-- Conteúdo principal -->
+    <main id="conteudo">
+        <div class="container page-layout">
+            <article>
+                <!-- Principais Certificações -->
+                <section class="content-block">
+                    <h2>Nossas Certificações</h2>
+                    <p>O IBAP-RJ é credenciado e certificado por órgãos nacionais e internacionais, garantindo a qualidade e conformidade de seus serviços.</p>
+
+                    <div class="certifications-grid">
+                        <div class="certification-card">
+                            <div class="certification-card__icon">🏛️</div>
+                            <h3>OSCIP</h3>
+                            <p>Organização da Sociedade Civil de Interesse Público, reconhecida pelo Ministério da Justiça.</p>
+                        </div>
+
+                        <div class="certification-card">
+                            <div class="certification-card__icon">📋</div>
+                            <h3>ISO 9001</h3>
+                            <p>Norma de Sistema de Gestão da Qualidade aplicada aos nossos processos de consultoria.</p>
+                        </div>
+
+                        <div class="certification-card">
+                            <div class="certification-card__icon">✓</div>
+                            <h3>Registro CNRH</h3>
+                            <p>Registro no Conselho Nacional de Recursos Humanos para programas de treinamento.</p>
+                        </div>
+
+                        <div class="certification-card">
+                            <div class="certification-card__icon">🔐</div>
+                            <h3>Data Protection</h3>
+                            <p>Conformidade com LGPD - Lei Geral de Proteção de Dados Pessoais.</p>
+                        </div>
+
+                        <div class="certification-card">
+                            <div class="certification-card__icon">🌍</div>
+                            <h3>ODS Aligned</h3>
+                            <p>Compromisso com os Objetivos de Desenvolvimento Sustentável da ONU.</p>
+                        </div>
+
+                        <div class="certification-card">
+                            <div class="certification-card__icon">📊</div>
+                            <h3>Auditoria Anual</h3>
+                            <p>Auditoria anual independente de conformidade fiscal e financeira.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Credenciais Profissionais -->
+                <section class="content-block">
+                    <h2>Credenciais Profissionais</h2>
+                    <p>Nossos consultores possuem certificações de excelência em suas áreas de especialização:</p>
+
+                    <div class="badges-grid">
+                        <div class="badge-item">
+                            <div class="badge-item__icon">👔</div>
+                            <div>
+                                <h3>PMP - Project Management Professional</h3>
+                                <p>Certificação reconhecida internacionalmente pelo PMI para gestores de projetos.</p>
+                            </div>
+                        </div>
+
+                        <div class="badge-item">
+                            <div class="badge-item__icon">🎓</div>
+                            <div>
+                                <h3>Coaching Executivo Internacional</h3>
+                                <p>Certificações em coaching pela International Coach Federation (ICF).</p>
+                            </div>
+                        </div>
+
+                        <div class="badge-item">
+                            <div class="badge-item__icon">📈</div>
+                            <div>
+                                <h3>Lean Six Sigma</h3>
+                                <p>Especializações em metodologias Lean e Six Sigma para otimização de processos.</p>
+                            </div>
+                        </div>
+
+                        <div class="badge-item">
+                            <div class="badge-item__icon">💼</div>
+                            <div>
+                                <h3>ITIL - IT Service Management</h3>
+                                <p>Certificações em gestão de serviços de TI e transformação digital.</p>
+                            </div>
+                        </div>
+
+                        <div class="badge-item">
+                            <div class="badge-item__icon">👥</div>
+                            <div>
+                                <h3>Master em Gestão</h3>
+                                <p>Pós-graduações e mestrados em Administração, Gestão Pública e Governança.</p>
+                            </div>
+                        </div>
+
+                        <div class="badge-item">
+                            <div class="badge-item__icon">🔬</div>
+                            <div>
+                                <h3>Pesquisa Acadêmica</h3>
+                                <p>Publicações em revistas científicas e participação em seminários internacionais.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Histórico de Acreditações -->
+                <section class="content-block">
+                    <h2>Histórico de Acreditações</h2>
+                    <p>Trajetória de reconhecimento e credenciamento do IBAP-RJ ao longo dos anos.</p>
+
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="year">2024</div>
+                            <h3>Renovação ISO 9001:2015</h3>
+                            <p>Renovação da certificação ISO 9001 com avaliação positiva de conformidade completa.</p>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="year">2023</div>
+                            <h3>Certificação LGPD</h3>
+                            <p>Implementação e certificação de conformidade total com Lei Geral de Proteção de Dados.</p>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="year">2022</div>
+                            <h3>Reconhecimento ODS</h3>
+                            <p>Formalização do compromisso com Objetivos de Desenvolvimento Sustentável.</p>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="year">2020</div>
+                            <h3>Registro CNRH</h3>
+                            <p>Credenciamento junto ao Conselho Nacional de Recursos Humanos para treinamentos.</p>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="year">2018</div>
+                            <h3>Certificação ISO 9001</h3>
+                            <p>Obtenção da primeira certificação ISO 9001 para Gestão da Qualidade.</p>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="year">2015</div>
+                            <h3>Reconhecimento como OSCIP</h3>
+                            <p>Qualificação como Organização da Sociedade Civil de Interesse Público.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Compromissos -->
+                <section class="content-block">
+                    <h2>Nossos Compromissos</h2>
+                    <p>Além das certificações formais, o IBAP-RJ se compromete com:</p>
+
+                    <div class="badges-grid">
+                        <div class="badge-item">
+                            <div class="badge-item__icon">🌱</div>
+                            <div>
+                                <h3>Sustentabilidade</h3>
+                                <p>Práticas ambientalmente responsáveis e redução da pegada de carbono.</p>
+                            </div>
+                        </div>
+
+                        <div class="badge-item">
+                            <div class="badge-item__icon">🤝</div>
+                            <div>
+                                <h3>Responsabilidade Social</h3>
+                                <p>Programas de inclusão social, educação e desenvolvimento comunitário.</p>
+                            </div>
+                        </div>
+
+                        <div class="badge-item">
+                            <div class="badge-item__icon">📊</div>
+                            <div>
+                                <h3>Transparência Total</h3>
+                                <p>Divulgação completa de informações financeiras e administrativas.</p>
+                            </div>
+                        </div>
+
+                        <div class="badge-item">
+                            <div class="badge-item__icon">⚖️</div>
+                            <div>
+                                <h3>Conformidade Regulatória</h3>
+                                <p>Cumprimento rigoroso de todas as leis e regulamentações aplicáveis.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </article>
+
+            <!-- Sidebar -->
+            <aside class="sidebar" aria-label="Menu lateral">
+                <div class="sidebar-box">
+                    <h3>📜 Documentos</h3>
+                    <ul>
+                        <li><a href="#">Certificado ISO 9001</a></li>
+                        <li><a href="#">Termo OSCIP</a></li>
+                        <li><a href="#">Registro CNRH</a></li>
+                        <li><a href="#">Relatório LGPD</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-box">
+                    <h3>🔗 Links Úteis</h3>
+                    <ul>
+                        <li><a href="/sobre.html">Sobre o IBAP-RJ</a></li>
+                        <li><a href="/atuacao.html">Linhas de Atuação</a></li>
+                        <li><a href="/responsabilidade-social.html">Responsabilidade Social</a></li>
+                        <li><a href="/contato.html">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-box">
+                    <h3>🌐 Órgãos Credenciadores</h3>
+                    <ul>
+                        <li><a href="#">Ministério da Justiça</a></li>
+                        <li><a href="#">PMI Brasil</a></li>
+                        <li><a href="#">ABNT</a></li>
+                        <li><a href="#">CNRH</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="site-footer">
+        <div class="container site-footer__grid">
+            <div>
+                <p style="font-size: 1.35rem; font-weight: 700; margin-bottom: 0.5rem;">IBAP-RJ</p>
+                <p style="font-size: 0.9rem; line-height: 1.6; color: rgba(255, 255, 255, 0.8);">Instituto Brasileiro de Administração Pública. Certificado e acreditado para qualidade desde 2002.</p>
+            </div>
+
+            <nav>
+                <h2 class="site-footer__title">Instituto</h2>
+                <ul>
+                    <li><a href="/sobre.html">Quem somos</a></li>
+                    <li><a href="/historico.html">Histórico</a></li>
+                    <li><a href="/certificacoes.html">Certificações</a></li>
+                    <li><a href="/responsabilidade-social.html">Responsabilidade social</a></li>
+                </ul>
+            </nav>
+
+            <nav>
+                <h2 class="site-footer__title">Consultoria</h2>
+                <ul>
+                    <li><a href="/atuacao.html">Linhas de atuação</a></li>
+                    <li><a href="/projetos.html">Projetos</a></li>
+                    <li><a href="/boletim.html">Boletim</a></li>
+                    <li><a href="/contato.html">Contato</a></li>
+                </ul>
+            </nav>
+
+            <nav>
+                <h2 class="site-footer__title">Transparência</h2>
+                <ul>
+                    <li><a href="https://ibap-rj.org.br/categoria-transparencia/ibap-rj/">Compliance</a></li>
+                    <li><a href="https://ibap-rj.org.br/categoria-transparencia/editais/">Editais</a></li>
+                    <li><a href="https://ibap-rj.org.br/categoria-transparencia/relatorio-de-transparencia-salarial/">Relatórios</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="container site-footer__bottom">
+            <p>© <span id="year">2026</span> IBAP-RJ. Todos os direitos reservados.</p>
+            <p>Rua Buenos Aires, 68, 31º andar, Rio de Janeiro – RJ</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

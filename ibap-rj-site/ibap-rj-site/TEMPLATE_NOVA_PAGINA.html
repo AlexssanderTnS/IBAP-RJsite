@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<!-- 
+  TEMPLATE PARA NOVAS PÁGINAS DO SITE IBAP-RJ
+  
+  INSTRUÇÕES:
+  1. Copie este arquivo: cp TEMPLATE_NOVA_PAGINA.html sua-pagina.html
+  2. Edite APENAS os comentários <!-- EDITAR --> abaixo
+  3. Use as classes CSS que já existem em style.css
+  4. Não modifique o header, footer ou estrutura base
+  5. Teste em 320px, 768px e 1200px antes de publicar
+  
+  CLASSES ÚTEIS JÁ DISPONÍVEIS:
+  - .container (max-width, padding, margin-auto)
+  - .page-header (hero section azul)
+  - .content-block (card branca com sombra)
+  - .sidebar-box (box cinzenta da sidebar)
+  - .btn, .btn--outline (botões)
+  - .breadcrumb (navegação)
+  
+-->
+<html lang="pt-BR" class="js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- EDITAR: Título e descrição -->
+    <title>Título da Página | IBAP-RJ</title>
+    <meta name="description" content="Uma descrição breve da página para SEO.">
+    <meta name="canonical" href="https://ibap-rj.org.br/sua-pagina/">
+
+    <!-- Open Graph para compartilhamento em redes sociais -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="IBAP-RJ">
+    <meta property="og:title" content="Título da Página | IBAP-RJ">
+    <meta property="og:description" content="Uma descrição breve para compartilhamento.">
+    <meta property="og:url" content="https://ibap-rj.org.br/sua-pagina/">
+
+    <!-- Favicon (não editar) -->
+    <link rel="icon" href="https://ibap-rj.org.br/wp-content/uploads/2023/09/ibap-rj-icon-32x32-1.png" sizes="32x32">
+
+    <!-- Fontes do Google (não editar) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
+
+    <!-- Ativar suporte a JS (não editar) -->
+    <script>document.documentElement.classList.add('js');</script>
+
+    <!-- CSS Base (não editar) -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/internal-pages.css">
+
+    <!-- JavaScript (não editar) -->
+    <script src="../js/script.js" defer></script>
+
+    <!-- ESPAÇO PARA ADICIONAR ESTILOS CUSTOMIZADOS APENAS SE NECESSÁRIO -->
+    <style>
+        /* Coloque aqui APENAS estilos específicos desta página */
+        /* Se precisar de novos estilos, prefira adicionar em style.css */
+    </style>
+</head>
+<body>
+    <!-- Skip link para acessibilidade (não editar) -->
+    <a class="skip-link" href="#conteudo" style="position: absolute; left: -10000px; background: #000; color: #fff; padding: 6px; z-index: 10000;">Pular para o conteúdo</a>
+
+    <!-- ============================================================
+         BARRA DE ACESSO RÁPIDO (não editar — igual em todas as páginas)
+         ============================================================ -->
+    <div class="utility-bar">
+        <div class="container utility-bar__inner">
+            <p class="utility-bar__phone">Atendimento: <a href="tel:+552138061000">(21) 3806-1000</a></p>
+            <nav aria-label="Acesso rápido">
+                <ul class="utility-bar__links">
+                    <li><a href="https://ibap-rj.org.br/categoria-transparencia/ibap-rj/">Transparência</a></li>
+                    <li><a href="https://ibap-rj.org.br/categoria-transparencia/editais/">Editais</a></li>
+                    <li><a href="http://200.146.211.21/IBAPCC/">Contracheque</a></li>
+                    <li><a href="https://ibap-rj.org.br/ponto-ibap/">Ponto IBAP</a></li>
+                    <li><a href="mailto:denuncias@ibap-rj.org.br">Canal de denúncias</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- ============================================================
+         CABEÇALHO COM MENU (não editar — igual em todas as páginas)
+         ============================================================ -->
+    <header class="site-header">
+        <div class="container site-header__inner">
+            <a class="brand" href="/">
+                <img class="brand__logo" src="https://ibap-rj.org.br/wp-content/uploads/2023/09/iba-rj-logo.jpg" alt="IBAP-RJ">
+            </a>
+
+            <nav class="main-nav" id="main-nav" aria-label="Principal">
+                <ul class="main-nav__list">
+                    <li><a class="main-nav__link" href="/">Home</a></li>
+                    <li><a class="main-nav__link" href="/sobre.html">Sobre</a></li>
+                    <li><a class="main-nav__link" href="/atuacao.html">Atuação</a></li>
+                    <li><a class="main-nav__link" href="/#projetos">Projetos</a></li>
+                    <li><a class="main-nav__link" href="/#boletim">Boletim</a></li>
+                    <li><a class="main-nav__link" href="/contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ============================================================
+         BREADCRUMB (EDITAR: último item)
+         ============================================================ -->
+    <nav class="container breadcrumb" aria-label="Caminho da página">
+        <a href="/">Home</a> / 
+        <!-- EDITAR: O nome desta página -->
+        <strong>Sua Página</strong>
+    </nav>
+
+    <!-- ============================================================
+         HERO SECTION (EDITAR: título e descrição)
+         ============================================================ -->
+    <section class="page-header">
+        <div class="container">
+            <!-- EDITAR: Título principal (H1) -->
+            <h1>Título Principal da Página</h1>
+            
+            <!-- EDITAR: Descrição breve (max 200 caracteres) -->
+            <p>Uma descrição clara e breve que explica o que o visitante vai encontrar nesta página. Máximo 2 linhas.</p>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         CONTEÚDO PRINCIPAL
+         ============================================================ -->
+    <main id="conteudo">
+        <div class="container page-layout">
+            <!-- Coluna de conteúdo (principal) -->
+            <article>
+                
+                <!-- SEÇÃO 1: Introdução (copy/paste o bloco abaixo quantas vezes precisar) -->
+                <section class="content-block">
+                    <h2>Seção de Introdução</h2>
+                    <p>Parágrafo de introdução que explica o contexto e o propósito desta seção.</p>
+                    <p>Você pode adicionar quantos parágrafos precisar. Use `<h3>` para subtítulos dentro da seção.</p>
+                </section>
+
+                <!-- SEÇÃO 2: Grid de Cards (exemplo com 3 colunas) -->
+                <section class="content-block">
+                    <h2>Seção com Cards</h2>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+                        
+                        <!-- Card 1 -->
+                        <div style="padding: 1.5rem; background: var(--surface); border-radius: var(--radius); border-left: 3px solid var(--verde-600);">
+                            <h3 style="margin-bottom: 0.75rem; color: var(--azul-900);">Título do Card</h3>
+                            <p style="color: var(--muted); line-height: 1.6;">Descrição breve do card. Coloque informação relevante aqui.</p>
+                        </div>
+
+                        <!-- Card 2 (copie Card 1 e mude o conteúdo) -->
+                        <div style="padding: 1.5rem; background: var(--surface); border-radius: var(--radius); border-left: 3px solid var(--verde-600);">
+                            <h3 style="margin-bottom: 0.75rem; color: var(--azul-900);">Outro Título</h3>
+                            <p style="color: var(--muted); line-height: 1.6;">Descrição breve do segundo card.</p>
+                        </div>
+
+                        <!-- Card 3 (copie Card 1 e mude o conteúdo) -->
+                        <div style="padding: 1.5rem; background: var(--surface); border-radius: var(--radius); border-left: 3px solid var(--verde-600);">
+                            <h3 style="margin-bottom: 0.75rem; color: var(--azul-900);">Terceiro Título</h3>
+                            <p style="color: var(--muted); line-height: 1.6;">Descrição breve do terceiro card.</p>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- SEÇÃO 3: Call to Action -->
+                <section style="padding: clamp(2rem, 4vw, 3rem); background: var(--verde-100); border-left: 4px solid var(--verde-600); border-radius: 0 var(--radius) var(--radius) 0; margin-top: 2rem;">
+                    <h3 style="color: var(--azul-900); margin-bottom: 0.75rem; font-size: 1.35rem;">Pronto para dar o próximo passo?</h3>
+                    <p style="color: var(--muted); margin-bottom: 1.5rem; max-width: 60ch;">Descrição breve de como o visitante pode agir agora.</p>
+                    
+                    <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+                        <a href="/contato.html" style="display: inline-block; padding: 0.75rem 1.5rem; background: var(--verde-600); color: white; border-radius: var(--radius-sm); font-weight: 500; text-decoration: none;">
+                            Botão Principal
+                        </a>
+                        <a href="/sobre.html" style="display: inline-block; padding: 0.75rem 1.5rem; background: transparent; color: var(--azul-700); border: 1px solid var(--azul-700); border-radius: var(--radius-sm); font-weight: 500; text-decoration: none;">
+                            Botão Secundário
+                        </a>
+                    </div>
+                </section>
+
+            </article>
+
+            <!-- ========================================================
+                 SIDEBAR (só aparece em desktop)
+                 ======================================================== -->
+            <aside class="sidebar" aria-label="Menu lateral">
+                
+                <!-- Box de navegação -->
+                <div class="sidebar-box">
+                    <h3>Links Relacionados</h3>
+                    <ul style="list-style: none; display: grid; gap: 0.5rem;">
+                        <li><a href="/sobre.html">Link 1</a></li>
+                        <li><a href="/atuacao.html">Link 2</a></li>
+                        <li><a href="/contato.html">Link 3</a></li>
+                    </ul>
+                </div>
+
+                <!-- Box de informação -->
+                <div class="sidebar-box">
+                    <h3>Informação Rápida</h3>
+                    <p>Coloque aqui um texto descritivo, dado importante ou call-to-action.</p>
+                </div>
+
+            </aside>
+
+        </div>
+    </main>
+
+    <!-- ============================================================
+         RODAPÉ (não editar — igual em todas as páginas)
+         ============================================================ -->
+    <footer class="site-footer" style="background: var(--azul-950); color: var(--white); padding-top: 3rem; padding-bottom: 1.5rem; margin-top: 4rem;">
+        <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+            
+            <div>
+                <p style="font-size: 1.35rem; font-weight: 700; margin-bottom: 0.5rem;">IBAP-RJ</p>
+                <p style="font-size: 0.9rem; line-height: 1.6; color: rgba(255, 255, 255, 0.8);">Instituto Brasileiro de Administração Pública. Desde 2002.</p>
+            </div>
+
+            <nav>
+                <h2 style="font-size: 0.95rem; font-weight: 600; margin-bottom: 1rem; color: var(--white);">Instituto</h2>
+                <ul style="list-style: none; display: grid; gap: 0.5rem;">
+                    <li><a href="/sobre.html" style="color: rgba(255, 255, 255, 0.8); font-size: 0.9rem; text-decoration: none;">Quem somos</a></li>
+                    <li><a href="/atuacao.html" style="color: rgba(255, 255, 255, 0.8); font-size: 0.9rem; text-decoration: none;">Linhas de atuação</a></li>
+                    <li><a href="/contato.html" style="color: rgba(255, 255, 255, 0.8); font-size: 0.9rem; text-decoration: none;">Contato</a></li>
+                </ul>
+            </nav>
+
+            <nav>
+                <h2 style="font-size: 0.95rem; font-weight: 600; margin-bottom: 1rem; color: var(--white);">Consultoria</h2>
+                <ul style="list-style: none; display: grid; gap: 0.5rem;">
+                    <li><a href="/atuacao.html" style="color: rgba(255, 255, 255, 0.8); font-size: 0.9rem; text-decoration: none;">Serviços</a></li>
+                    <li><a href="/#projetos" style="color: rgba(255, 255, 255, 0.8); font-size: 0.9rem; text-decoration: none;">Projetos</a></li>
+                    <li><a href="/boletim.html" style="color: rgba(255, 255, 255, 0.8); font-size: 0.9rem; text-decoration: none;">Boletim</a></li>
+                </ul>
+            </nav>
+
+            <nav>
+                <h2 style="font-size: 0.95rem; font-weight: 600; margin-bottom: 1rem; color: var(--white);">Transparência</h2>
+                <ul style="list-style: none; display: grid; gap: 0.5rem;">
+                    <li><a href="https://ibap-rj.org.br/categoria-transparencia/ibap-rj/" style="color: rgba(255, 255, 255, 0.8); font-size: 0.9rem; text-decoration: none;" target="_blank" rel="noopener">Compliance</a></li>
+                    <li><a href="https://ibap-rj.org.br/categoria-transparencia/editais/" style="color: rgba(255, 255, 255, 0.8); font-size: 0.9rem; text-decoration: none;" target="_blank" rel="noopener">Editais</a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+        <div class="container" style="padding-top: 1.5rem; border-top: 1px solid rgba(255, 255, 255, 0.1); text-align: center; font-size: 0.85rem; color: rgba(255, 255, 255, 0.7);">
+            <p>© <span id="year">2026</span> IBAP-RJ. Todos os direitos reservados.</p>
+            <p>Rua Buenos Aires, 68, 31º andar, Rio de Janeiro – RJ</p>
+        </div>
+    </footer>
+
+    <!-- ============================================================
+         SCRIPT FINAL (não editar)
+         ============================================================ -->
+    <script>
+        // Atualizar ano automaticamente
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
